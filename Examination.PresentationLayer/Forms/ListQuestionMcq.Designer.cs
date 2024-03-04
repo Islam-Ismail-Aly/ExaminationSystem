@@ -37,20 +37,17 @@
             radioD = new RadioButton();
             labelC = new Label();
             radioC = new RadioButton();
-            label2 = new Label();
-            labelQuestionNo = new Label();
-            label1 = new Label();
             SuspendLayout();
             // 
             // txtQuestionContent
             // 
             txtQuestionContent.BackColor = Color.PaleTurquoise;
             txtQuestionContent.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
-            txtQuestionContent.Location = new Point(158, 13);
+            txtQuestionContent.Location = new Point(11, 13);
             txtQuestionContent.Multiline = true;
             txtQuestionContent.Name = "txtQuestionContent";
             txtQuestionContent.ReadOnly = true;
-            txtQuestionContent.Size = new Size(345, 43);
+            txtQuestionContent.Size = new Size(419, 43);
             txtQuestionContent.TabIndex = 0;
             // 
             // labelA
@@ -141,43 +138,10 @@
             radioC.Text = "(C)";
             radioC.UseVisualStyleBackColor = true;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
-            label2.Location = new Point(126, 16);
-            label2.Name = "label2";
-            label2.Size = new Size(14, 19);
-            label2.TabIndex = 6;
-            label2.Text = ")";
-            // 
-            // labelQuestionNo
-            // 
-            labelQuestionNo.AutoSize = true;
-            labelQuestionNo.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
-            labelQuestionNo.Location = new Point(80, 16);
-            labelQuestionNo.Name = "labelQuestionNo";
-            labelQuestionNo.Size = new Size(13, 19);
-            labelQuestionNo.TabIndex = 7;
-            labelQuestionNo.Text = ".";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
-            label1.Location = new Point(11, 16);
-            label1.Name = "label1";
-            label1.Size = new Size(68, 19);
-            label1.TabIndex = 8;
-            label1.Text = "Question";
-            // 
             // ListQuestionMcq
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(label2);
-            Controls.Add(labelQuestionNo);
-            Controls.Add(label1);
             Controls.Add(radioD);
             Controls.Add(radioC);
             Controls.Add(radioB);
@@ -188,7 +152,7 @@
             Controls.Add(labelA);
             Controls.Add(txtQuestionContent);
             Name = "ListQuestionMcq";
-            Size = new Size(518, 246);
+            Size = new Size(442, 246);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -199,14 +163,11 @@
         private Label labelA;
         private Label labelB;
         private Label labelD;
-        private RadioButton radioA;
-        private RadioButton radioB;
+        public RadioButton? radioA;
+        public RadioButton? radioB;
         private RadioButton radioButton3;
-        private RadioButton radioD;
+        public RadioButton? radioD;
         private Label labelC;
-        private RadioButton radioC;
-        private Label label2;
-        private Label labelQuestionNo;
-        private Label label1;
+        public RadioButton? radioC;
     }
 }

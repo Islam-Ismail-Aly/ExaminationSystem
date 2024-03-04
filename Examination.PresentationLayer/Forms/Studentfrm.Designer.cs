@@ -57,6 +57,7 @@
             flowLayoutPanel = new FlowLayoutPanel();
             comboCourse = new ComboBox();
             label6 = new Label();
+            btnSubmit = new Button();
             ProfileTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             CreateExamTab.SuspendLayout();
@@ -162,7 +163,7 @@
             tabControl2.Location = new Point(12, 12);
             tabControl2.Name = "tabControl2";
             tabControl2.SelectedIndex = 0;
-            tabControl2.Size = new Size(779, 509);
+            tabControl2.Size = new Size(779, 562);
             tabControl2.TabIndex = 0;
             // 
             // tabProfile
@@ -308,6 +309,7 @@
             // 
             // tabCreateExam
             // 
+            tabCreateExam.Controls.Add(btnSubmit);
             tabCreateExam.Controls.Add(btnGetQuestion);
             tabCreateExam.Controls.Add(panelQuestion);
             tabCreateExam.Controls.Add(comboCourse);
@@ -315,16 +317,17 @@
             tabCreateExam.Location = new Point(4, 24);
             tabCreateExam.Name = "tabCreateExam";
             tabCreateExam.Padding = new Padding(3);
-            tabCreateExam.Size = new Size(771, 481);
+            tabCreateExam.Size = new Size(771, 534);
             tabCreateExam.TabIndex = 1;
             tabCreateExam.Text = "Create Exam";
             tabCreateExam.UseVisualStyleBackColor = true;
             // 
             // btnGetQuestion
             // 
+            btnGetQuestion.Font = new Font("Segoe UI", 10F);
             btnGetQuestion.Location = new Point(272, 14);
             btnGetQuestion.Name = "btnGetQuestion";
-            btnGetQuestion.Size = new Size(111, 35);
+            btnGetQuestion.Size = new Size(118, 35);
             btnGetQuestion.TabIndex = 4;
             btnGetQuestion.Text = "Get Question";
             btnGetQuestion.UseVisualStyleBackColor = true;
@@ -364,12 +367,27 @@
             label6.TabIndex = 0;
             label6.Text = "Course Name:";
             // 
+            // btnSubmit
+            // 
+            btnSubmit.BackColor = Color.DodgerBlue;
+            btnSubmit.FlatAppearance.BorderSize = 0;
+            btnSubmit.FlatStyle = FlatStyle.Flat;
+            btnSubmit.Font = new Font("Segoe UI", 10F);
+            btnSubmit.ForeColor = Color.White;
+            btnSubmit.Location = new Point(17, 488);
+            btnSubmit.Name = "btnSubmit";
+            btnSubmit.Size = new Size(109, 40);
+            btnSubmit.TabIndex = 8;
+            btnSubmit.Text = "Submit";
+            btnSubmit.UseVisualStyleBackColor = false;
+            btnSubmit.Click += btnSubmit_Click;
+            // 
             // Studentfrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
-            ClientSize = new Size(803, 533);
+            ClientSize = new Size(803, 579);
             Controls.Add(tabControl2);
             Name = "Studentfrm";
             ShowIcon = false;
@@ -423,5 +441,6 @@
         private Panel panelQuestion;
         private FlowLayoutPanel flowLayoutPanel;
         private Button btnGetQuestion;
+        private Button btnSubmit;
     }
 }

@@ -1,5 +1,6 @@
 ﻿
 using Examination.BussinessLogicLayer.Services;
+using Examination.BussinessLogicLayer.ViewModels;
 using Examination.DataAccessLayer.Data;
 
 namespace Examination.PresentationLayer.Forms
@@ -8,6 +9,15 @@ namespace Examination.PresentationLayer.Forms
     {
         private readonly StudentService _studentService;
         private readonly ExamService _examService;
+
+        List<ExamQuestionViewModel> listQuestion;
+        List<AnswerViewModel> answerList;
+        List<AnswerViewModel> selectedAnswer = new List<AnswerViewModel>();
+
+        List<int>? finalResult = new List<int>();
+
+        ListQuestionMcq[]? listMcq = new ListQuestionMcq[5];
+        ListQuestionTF[]? listTF = new ListQuestionTF[5];
 
         private readonly Student _student;
 
@@ -47,52 +57,108 @@ namespace Examination.PresentationLayer.Forms
 
         private void btnGetQuestion_Click(object sender, EventArgs e)
         {
-            var list = _examService.GetExamQuestion(comboCourse.Text);
+            if (comboCourse.SelectedValue != null)
+            {
+                listQuestion = _examService.GetExamQuestion(comboCourse.Text);
 
-            ListQuestionMcq[] listMcq = new ListQuestionMcq[5];
-            ListQuestionTF[] listTF = new ListQuestionTF[5];
+                for (int i = 0; i < listMcq.Length; i++)
+                {
+                    if (listQuestion[i].Type == "MCQ")
+                    {
+                        listMcq[i] = new ListQuestionMcq();
 
+                        listMcq[i].QuestionContent = listQuestion[i].QuestionContent.Trim();
+
+                        answerList = _examService.GetAnswers(listQuestion[i].QuestionId);
+
+                        listMcq[i].AnswerA = answerList[0].AnswerContent.Trim();
+                        listMcq[i].AnswerB = answerList[1].AnswerContent.Trim();
+                        listMcq[i].AnswerC = answerList[2].AnswerContent.Trim();
+                        listMcq[i].AnswerD = answerList[3].AnswerContent.Trim();
+
+                        listMcq[i].Answers = answerList;
+
+                        //listMcq[i].rad
+
+                        if (flowLayoutPanel.Controls.Count < 0)
+                            flowLayoutPanel.Controls.Clear();
+                        else
+                            flowLayoutPanel.Controls.Add(listMcq[i]);
+
+                        listMcq[i].RadioButtons.Add(listMcq[i].radioA);
+                        listMcq[i].RadioButtons.Add(listMcq[i].radioB);
+                        listMcq[i].RadioButtons.Add(listMcq[i].radioC);
+                        listMcq[i].RadioButtons.Add(listMcq[i].radioD);
+
+                    }
+                    else
+                    {
+                        listTF[i] = new ListQuestionTF();
+
+                        listTF[i].QuestionContent = listQuestion[i].QuestionContent.Trim();
+
+                        var answerList = _examService.GetAnswers(listQuestion[i].QuestionId);
+
+                        listTF[i].AnswerT = answerList[0].AnswerContent.Trim();
+                        listTF[i].AnswerF = answerList[1].AnswerContent.Trim();
+
+                        listTF[i].Answers = answerList;
+
+                        if (flowLayoutPanel.Controls.Count < 0)
+                            flowLayoutPanel.Controls.Clear();
+                        else
+                            flowLayoutPanel.Controls.Add(listTF[i]);
+
+                        listTF[i].RadioButtons.Add(listTF[i].radioT);
+                        listTF[i].RadioButtons.Add(listTF[i].radioF);
+                    }
+                } 
+            }
+            else
+            {
+                MessageBox.Show("Please check course!","Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+
+            btnSubmit.Visible = true;
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
             for (int i = 0; i < listMcq.Length; i++)
             {
-                if (list[i].Type == "MCQ")
+                if (listMcq[i] != null)
                 {
-                    listMcq[i] = new ListQuestionMcq();
-
-                    listMcq[i].QuestionContent = list[i].QuestionContent.Trim();
-
-                    var answerList = _examService.GetAnswers(list[i].QuestionId);
-
-                    listMcq[i].AnswerA = answerList[0].AnswerContent.Trim();
-                    listMcq[i].AnswerB = answerList[1].AnswerContent.Trim();
-                    listMcq[i].AnswerC = answerList[2].AnswerContent.Trim();
-                    listMcq[i].AnswerD = answerList[3].AnswerContent.Trim();
-
-                    if (flowLayoutPanel.Controls.Count < 0)
-                        flowLayoutPanel.Controls.Clear();
-                    else
-                        flowLayoutPanel.Controls.Add(listMcq[i]);
-
-                    ListQuestionMcq.questionType = list[i].Type;
-                }
-                else
-                {
-                    listTF[i] = new ListQuestionTF();
-
-                    listTF[i].QuestionContent = list[i].QuestionContent.Trim();
-
-                    var answerList = _examService.GetAnswers(list[i].QuestionId);
-
-                    listTF[i].AnswerT = answerList[0].AnswerContent.Trim();
-                    listTF[i].AnswerF = answerList[1].AnswerContent.Trim();
-
-                    if (flowLayoutPanel.Controls.Count < 0)
-                        flowLayoutPanel.Controls.Clear();
-                    else
-                        flowLayoutPanel.Controls.Add(listTF[i]);
-
-                    ListQuestionTF.questionType = list[i].Type;
+                    finalResult.Add(listMcq[i].GetCorrection());
+                    selectedAnswer.Add(listMcq[i].SelectedAnswer);
                 }
             }
+
+            for (int i = 0; i < listTF.Length; i++)
+            {
+                if (listTF[i] != null)
+                {
+                    finalResult.Add(listTF[i].GetCorrection());
+                    selectedAnswer.Add(listTF[i].SelectedAnswer);
+                }
+            }
+
+            int examId = _examService.InsertExam((int)comboCourse.SelectedValue, DateTime.Now, DateTime.Now.AddMinutes(30), 10);
+
+            _examService.InsertQuestionExam(listQuestion, examId);
+
+            _examService.InsertStudentQuestionExam(_student.StudentId, examId, selectedAnswer);
+
+            float sum = (float)(finalResult.Sum());
+
+             int finalGrade = (int)((sum / 5) * 100);
+
+            _examService.InsertStudentCourse(_student.StudentId, (int)comboCourse.SelectedValue, finalGrade);
+
+            MessageBox.Show($"Your Result is: {finalResult.Sum() * 3}", "Result", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+            flowLayoutPanel.Controls.Clear();
+
+            btnSubmit.Visible = false;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Examination.DataAccessLayer.Data;
+﻿using Examination.BussinessLogicLayer.ViewModels;
+using Examination.DataAccessLayer.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,11 +14,45 @@ namespace Examination.PresentationLayer.Forms
 {
     public partial class ListQuestionTF : UserControl
     {
-        public static string questionType;
+        public List<RadioButton>? RadioButtons { get; set; }
+        //public List<Answer> Answers { get; set; }
+
+        //public Answer SelectedAnswer { get; set; }
+        public List<AnswerViewModel> Answers { get; set; }
+        public AnswerViewModel SelectedAnswer { get; set; }
+
         public ListQuestionTF()
         {
             InitializeComponent();
-            labelQuestionNo.Text = questionType;
+            RadioButtons = new List<RadioButton>();
+        }
+
+        private void GetSelectedAnswer()
+        {
+            for (int i = 0; i < RadioButtons.Count; i++)
+            {
+                if (RadioButtons[i].Checked)
+                {
+                    SelectedAnswer = Answers[i];
+                    return;
+                }
+            }
+        }
+
+        public int GetCorrection()
+        {
+            int gradeFlag = 1;
+
+            for (int i = 0; i < Answers.Count; i++)
+            {
+                if (Answers[i].Correction.Value != RadioButtons[i].Checked)
+                {
+                    gradeFlag = 0;
+                    break;
+                }
+            }
+            GetSelectedAnswer();
+            return gradeFlag;
         }
 
         private string _questionContent;
