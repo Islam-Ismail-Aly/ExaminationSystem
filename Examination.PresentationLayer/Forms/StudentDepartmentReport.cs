@@ -19,8 +19,6 @@ namespace Examination.PresentationLayer.Forms
 
         private void StudentDepartmentReport_Load(object sender, EventArgs e)
         {
-
-
             comboDepartment.DataSource = _departmentService.GetDepartments();
             comboDepartment.DisplayMember = "Name";
             comboDepartment.ValueMember = "DeptId";
@@ -29,10 +27,6 @@ namespace Examination.PresentationLayer.Forms
 
         private void btnStudentDepartment_Click(object sender, EventArgs e)
         {
-            //reportViewerStudentDepartment.LocalReport.ReportEmbeddedResource = "Examination.PresentationLayer.Reports.StudentDepartmentReport.rdlc";
-            //_dataSet.DepartmentStudentByIdRep
-            //reportViewerStudentDepartment.RefreshReport();
-
             int departmentId = (int)comboDepartment.SelectedValue;
 
             using (var context = new ExaminationSystemContext())
@@ -47,7 +41,7 @@ namespace Examination.PresentationLayer.Forms
                     var row = _dataSet.DepartmentStudentByIdRep.NewDepartmentStudentByIdRepRow();
                     row.StudentId = student.StudentId;
                     row.Fname = student.Fname;
-                    row.Lname = student.Fname;
+                    row.Lname = student.Lname;
                     row.UserName = student.UserName;
 
                     // Add more properties as needed

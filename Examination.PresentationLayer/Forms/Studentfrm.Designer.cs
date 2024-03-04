@@ -52,7 +52,9 @@
             label7 = new Label();
             label4 = new Label();
             tabCreateExam = new TabPage();
-            btn_CreateExam = new Button();
+            btnGetQuestion = new Button();
+            panelQuestion = new Panel();
+            flowLayoutPanel = new FlowLayoutPanel();
             comboCourse = new ComboBox();
             label6 = new Label();
             ProfileTab.SuspendLayout();
@@ -62,6 +64,7 @@
             tabProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridCourses).BeginInit();
             tabCreateExam.SuspendLayout();
+            panelQuestion.SuspendLayout();
             SuspendLayout();
             // 
             // ProfileTab
@@ -159,7 +162,7 @@
             tabControl2.Location = new Point(12, 12);
             tabControl2.Name = "tabControl2";
             tabControl2.SelectedIndex = 0;
-            tabControl2.Size = new Size(779, 407);
+            tabControl2.Size = new Size(779, 509);
             tabControl2.TabIndex = 0;
             // 
             // tabProfile
@@ -179,7 +182,7 @@
             tabProfile.Location = new Point(4, 24);
             tabProfile.Name = "tabProfile";
             tabProfile.Padding = new Padding(3);
-            tabProfile.Size = new Size(771, 379);
+            tabProfile.Size = new Size(771, 481);
             tabProfile.TabIndex = 0;
             tabProfile.Text = "Profile";
             tabProfile.UseVisualStyleBackColor = true;
@@ -305,30 +308,49 @@
             // 
             // tabCreateExam
             // 
-            tabCreateExam.Controls.Add(btn_CreateExam);
+            tabCreateExam.Controls.Add(btnGetQuestion);
+            tabCreateExam.Controls.Add(panelQuestion);
             tabCreateExam.Controls.Add(comboCourse);
             tabCreateExam.Controls.Add(label6);
             tabCreateExam.Location = new Point(4, 24);
             tabCreateExam.Name = "tabCreateExam";
             tabCreateExam.Padding = new Padding(3);
-            tabCreateExam.Size = new Size(771, 379);
+            tabCreateExam.Size = new Size(771, 481);
             tabCreateExam.TabIndex = 1;
             tabCreateExam.Text = "Create Exam";
             tabCreateExam.UseVisualStyleBackColor = true;
             // 
-            // btn_CreateExam
+            // btnGetQuestion
             // 
-            btn_CreateExam.Location = new Point(13, 64);
-            btn_CreateExam.Name = "btn_CreateExam";
-            btn_CreateExam.Size = new Size(113, 35);
-            btn_CreateExam.TabIndex = 2;
-            btn_CreateExam.Text = "Create Exam";
-            btn_CreateExam.UseVisualStyleBackColor = true;
+            btnGetQuestion.Location = new Point(272, 14);
+            btnGetQuestion.Name = "btnGetQuestion";
+            btnGetQuestion.Size = new Size(111, 35);
+            btnGetQuestion.TabIndex = 4;
+            btnGetQuestion.Text = "Get Question";
+            btnGetQuestion.UseVisualStyleBackColor = true;
+            btnGetQuestion.Click += btnGetQuestion_Click;
+            // 
+            // panelQuestion
+            // 
+            panelQuestion.Controls.Add(flowLayoutPanel);
+            panelQuestion.Location = new Point(6, 62);
+            panelQuestion.Name = "panelQuestion";
+            panelQuestion.Size = new Size(759, 413);
+            panelQuestion.TabIndex = 3;
+            // 
+            // flowLayoutPanel
+            // 
+            flowLayoutPanel.AutoScroll = true;
+            flowLayoutPanel.Dock = DockStyle.Fill;
+            flowLayoutPanel.Location = new Point(0, 0);
+            flowLayoutPanel.Name = "flowLayoutPanel";
+            flowLayoutPanel.Size = new Size(759, 413);
+            flowLayoutPanel.TabIndex = 0;
             // 
             // comboCourse
             // 
             comboCourse.FormattingEnabled = true;
-            comboCourse.Location = new Point(95, 15);
+            comboCourse.Location = new Point(95, 21);
             comboCourse.Name = "comboCourse";
             comboCourse.Size = new Size(121, 23);
             comboCourse.TabIndex = 1;
@@ -336,7 +358,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(6, 18);
+            label6.Location = new Point(6, 24);
             label6.Name = "label6";
             label6.Size = new Size(82, 15);
             label6.TabIndex = 0;
@@ -347,7 +369,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
-            ClientSize = new Size(803, 431);
+            ClientSize = new Size(803, 533);
             Controls.Add(tabControl2);
             Name = "Studentfrm";
             ShowIcon = false;
@@ -364,13 +386,13 @@
             ((System.ComponentModel.ISupportInitialize)dataGridCourses).EndInit();
             tabCreateExam.ResumeLayout(false);
             tabCreateExam.PerformLayout();
+            panelQuestion.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button btn_Profile;
-        private Button btn_CreateExam;
         private TabControl tabControl1;
         private TabPage ProfileTab;
         private TabPage CreateExamTab;
@@ -398,5 +420,8 @@
         private Label label9;
         private TextBox txtSupervisor;
         private Label label10;
+        private Panel panelQuestion;
+        private FlowLayoutPanel flowLayoutPanel;
+        private Button btnGetQuestion;
     }
 }

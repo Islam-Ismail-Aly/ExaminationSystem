@@ -9,10 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Reports\InstructorCourseReport.rdlc" />
     <None Remove="Reports\StudentDepartmentReport.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Reports\InstructorCourseReport.rdlc" />
     <EmbeddedResource Include="Reports\StudentDepartmentReport.rdlc" />
   </ItemGroup>
 
@@ -39,6 +41,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>ExaminationSystemDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Update="InstructorCourseNameRepDataSet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>InstructorCourseNameRepDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -57,6 +64,10 @@
     <None Update="ExaminationSystemDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ExaminationSystemDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="InstructorCourseNameRepDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InstructorCourseNameRepDataSet.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
 

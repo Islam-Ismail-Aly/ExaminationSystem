@@ -1,10 +1,7 @@
 ﻿
+using Examination.BussinessLogicLayer.ViewModels;
 using Examination.DataAccessLayer.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Examination.BussinessLogicLayer.Services
 {
@@ -32,5 +29,20 @@ namespace Examination.BussinessLogicLayer.Services
         {
             return _db.Branches.FirstOrDefault(d => d.BranchId == BranchId).Name;
         }
+
+        public List<Instructor> GetInstructors()
+        {
+            return _db.Instructors.AsNoTracking().ToList();
+        }
+
+        public List<InstructorCourseViewModel> GetInstructorCourse(int InstructorId)
+        {
+            var list = _db.Database.SqlQuery<InstructorCourseViewModel>($"EXEC [InstructorProcedure].[InstructorCourseNameRep] {InstructorId}")
+                                      .AsNoTracking()
+                                      .ToList();
+
+            return (List<InstructorCourseViewModel>)list;
+        }
+
     }
 }

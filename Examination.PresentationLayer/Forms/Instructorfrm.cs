@@ -1,5 +1,7 @@
 ﻿using Examination.BussinessLogicLayer.Services;
 using Examination.DataAccessLayer.Data;
+using Examination.PresentationLayer.Helpers;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Examination.PresentationLayer.Forms
 {
@@ -114,6 +116,47 @@ namespace Examination.PresentationLayer.Forms
         {
             StudentDepartmentReport report = new StudentDepartmentReport();
             report.ShowDialog();
+        }
+
+        private void btn_AddQuestion_Click(object sender, EventArgs e)
+        {
+            if (!txtContent.Text.IsNullOrEmpty() && !comboQuestionType.Text.IsNullOrEmpty() && !comboCourse.Text.IsNullOrEmpty())
+            {
+                int courseId = (int)comboCourse.SelectedValue;
+
+                int questionId = _questionService.AddQuestionData(txtContent.Text, comboQuestionType.Text, courseId, _instructor.InstructorId);
+
+                if (comboQuestionType.Text == "MCQ")
+                {
+                    _questionService.AddAnswerData(txtAnswerA.Text, radioAnswerA.Checked, questionId);
+                    _questionService.AddAnswerData(txtAnswerB.Text, radioAnswerB.Checked, questionId);
+                    _questionService.AddAnswerData(txtAnswerC.Text, radioAnswerC.Checked, questionId);
+                    _questionService.AddAnswerData(txtAnswerD.Text, radioAnswerD.Checked, questionId);
+                }
+                else
+                {
+                    _questionService.AddAnswerData("True", radioT.Checked, questionId);
+                    _questionService.AddAnswerData("False", radioF.Checked, questionId);
+                }
+
+                _questionService.AddQuestionGradesData(questionId, 2);
+                _questionService.AddQuestionGradesData(questionId, 3);
+
+                MessageBox.Show("The data has been saved successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Clear all textboxs and comboxes
+                ControlHelperManager.ClearControl(this.Controls);
+            }
+            else
+            {
+                MessageBox.Show("Please check input data!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnInstructorCoursefrm_Click(object sender, EventArgs e)
+        {
+            InstructorCourseReport reportfrm = new InstructorCourseReport();
+            reportfrm.ShowDialog();
         }
     }
 }

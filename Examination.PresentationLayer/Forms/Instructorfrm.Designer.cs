@@ -41,7 +41,7 @@
             label7 = new Label();
             label4 = new Label();
             tabAddQuestion = new TabPage();
-            button1 = new Button();
+            btn_AddQuestion = new Button();
             radioF = new RadioButton();
             radioT = new RadioButton();
             radioAnswerD = new RadioButton();
@@ -65,6 +65,7 @@
             label1 = new Label();
             tabReport = new TabPage();
             btnStudentDepartmentfrm = new Button();
+            btnInstructorCoursefrm = new Button();
             tabControl1.SuspendLayout();
             tabProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridCourses).BeginInit();
@@ -205,7 +206,7 @@
             // tabAddQuestion
             // 
             tabAddQuestion.BackColor = Color.MintCream;
-            tabAddQuestion.Controls.Add(button1);
+            tabAddQuestion.Controls.Add(btn_AddQuestion);
             tabAddQuestion.Controls.Add(radioF);
             tabAddQuestion.Controls.Add(radioT);
             tabAddQuestion.Controls.Add(radioAnswerD);
@@ -234,19 +235,20 @@
             tabAddQuestion.TabIndex = 1;
             tabAddQuestion.Text = "Add Question";
             // 
-            // button1
+            // btn_AddQuestion
             // 
-            button1.BackColor = Color.DeepSkyBlue;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 10F);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(18, 168);
-            button1.Name = "button1";
-            button1.Size = new Size(138, 39);
-            button1.TabIndex = 6;
-            button1.Text = "Create";
-            button1.UseVisualStyleBackColor = false;
+            btn_AddQuestion.BackColor = Color.DeepSkyBlue;
+            btn_AddQuestion.FlatAppearance.BorderSize = 0;
+            btn_AddQuestion.FlatStyle = FlatStyle.Flat;
+            btn_AddQuestion.Font = new Font("Segoe UI", 10F);
+            btn_AddQuestion.ForeColor = Color.White;
+            btn_AddQuestion.Location = new Point(18, 168);
+            btn_AddQuestion.Name = "btn_AddQuestion";
+            btn_AddQuestion.Size = new Size(138, 39);
+            btn_AddQuestion.TabIndex = 6;
+            btn_AddQuestion.Text = "Create";
+            btn_AddQuestion.UseVisualStyleBackColor = false;
+            btn_AddQuestion.Click += btn_AddQuestion_Click;
             // 
             // radioF
             // 
@@ -438,6 +440,7 @@
             // tabReport
             // 
             tabReport.BackColor = Color.MintCream;
+            tabReport.Controls.Add(btnInstructorCoursefrm);
             tabReport.Controls.Add(btnStudentDepartmentfrm);
             tabReport.Location = new Point(4, 24);
             tabReport.Name = "tabReport";
@@ -453,13 +456,28 @@
             btnStudentDepartmentfrm.FlatStyle = FlatStyle.Flat;
             btnStudentDepartmentfrm.Font = new Font("Segoe UI", 10F);
             btnStudentDepartmentfrm.ForeColor = Color.White;
-            btnStudentDepartmentfrm.Location = new Point(3, 6);
+            btnStudentDepartmentfrm.Location = new Point(6, 14);
             btnStudentDepartmentfrm.Name = "btnStudentDepartmentfrm";
             btnStudentDepartmentfrm.Size = new Size(193, 39);
             btnStudentDepartmentfrm.TabIndex = 7;
             btnStudentDepartmentfrm.Text = "Student Department Report";
             btnStudentDepartmentfrm.UseVisualStyleBackColor = false;
             btnStudentDepartmentfrm.Click += btnStudentDepartmentfrm_Click;
+            // 
+            // btnInstructorCoursefrm
+            // 
+            btnInstructorCoursefrm.BackColor = Color.CadetBlue;
+            btnInstructorCoursefrm.FlatAppearance.BorderSize = 0;
+            btnInstructorCoursefrm.FlatStyle = FlatStyle.Flat;
+            btnInstructorCoursefrm.Font = new Font("Segoe UI", 10F);
+            btnInstructorCoursefrm.ForeColor = Color.White;
+            btnInstructorCoursefrm.Location = new Point(244, 14);
+            btnInstructorCoursefrm.Name = "btnInstructorCoursefrm";
+            btnInstructorCoursefrm.Size = new Size(193, 39);
+            btnInstructorCoursefrm.TabIndex = 7;
+            btnInstructorCoursefrm.Text = "Instructor Course Report";
+            btnInstructorCoursefrm.UseVisualStyleBackColor = false;
+            btnInstructorCoursefrm.Click += btnInstructorCoursefrm_Click;
             // 
             // Instructorfrm
             // 
@@ -517,8 +535,9 @@
         private Label lblisCorrect;
         private RadioButton radioF;
         private RadioButton radioT;
-        private Button button1;
+        private Button btn_AddQuestion;
         private TabPage tabReport;
         private Button btnStudentDepartmentfrm;
+        private Button btnInstructorCoursefrm;
     }
 }
