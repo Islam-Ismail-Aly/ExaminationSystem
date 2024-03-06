@@ -1,5 +1,6 @@
 ﻿using Examination.BussinessLogicLayer.Services;
 using Examination.DataAccessLayer.Data;
+using Examination.PresentationLayer.Helpers;
 using Microsoft.Reporting.WinForms;
 
 namespace Examination.PresentationLayer.Forms
@@ -53,6 +54,11 @@ namespace Examination.PresentationLayer.Forms
             reportInstructorCourse.LocalReport.ReportEmbeddedResource = "Examination.PresentationLayer.Reports.InstructorCourseReport.rdlc";
 
             reportInstructorCourse.RefreshReport();
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            CustomHelperManager.ExitHelper();
         }
     }
 }

@@ -44,6 +44,7 @@ namespace Examination.PresentationLayer.Forms
                 lblAnsC.Visible = true;
                 lblAnsD.Visible = true;
 
+                lblisCorrectTF.Visible = false;
                 lblisCorrect.Visible = true;
             }
             else if (comboQuestionType.Text != "MCQ")
@@ -64,6 +65,7 @@ namespace Examination.PresentationLayer.Forms
                 lblAnsD.Visible = false;
 
                 lblisCorrect.Visible = false;
+                lblisCorrectTF.Visible = true;
             }
 
             if (comboQuestionType.Text == "T/F")
@@ -106,6 +108,9 @@ namespace Examination.PresentationLayer.Forms
             comboCourse.ValueMember = "CourseId";
             comboCourse.SelectedIndex = -1;
 
+            txtDateTime.Text = DateTime.UtcNow.AddHours(2).ToString();
+
+            lblisCorrectTF.Visible = false;
         }
 
         private void comboQuestionType_SelectedIndexChanged(object sender, EventArgs e)
@@ -182,6 +187,16 @@ namespace Examination.PresentationLayer.Forms
         {
             StudentQuestionAnswersReport reportfrm = new StudentQuestionAnswersReport();
             reportfrm.ShowDialog();
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            CustomHelperManager.ExitHelper();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

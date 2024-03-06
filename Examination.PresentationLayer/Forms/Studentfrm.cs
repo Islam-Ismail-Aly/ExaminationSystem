@@ -2,6 +2,7 @@
 using Examination.BussinessLogicLayer.Services;
 using Examination.BussinessLogicLayer.ViewModels;
 using Examination.DataAccessLayer.Data;
+using Examination.PresentationLayer.Helpers;
 
 namespace Examination.PresentationLayer.Forms
 {
@@ -63,6 +64,8 @@ namespace Examination.PresentationLayer.Forms
             dataGridCourses.Columns["Topics"].Visible = false;
             dataGridCourses.Columns["InstructorCourses"].Visible = false;
             btnSubmit.Visible = false;
+
+            txtDateTime.Text = DateTime.UtcNow.AddHours(2).ToString();
         }
 
         private void btnGetQuestion_Click(object sender, EventArgs e)
@@ -129,7 +132,7 @@ namespace Examination.PresentationLayer.Forms
             }
             else
             {
-                MessageBox.Show("Please check course!","Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Please check course!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -162,7 +165,7 @@ namespace Examination.PresentationLayer.Forms
 
             float sum = (float)(finalResult.Sum());
 
-             int finalGrade = (int)((sum / 5) * 100);
+            int finalGrade = (int)((sum / 5) * 100);
 
             _examService.InsertStudentCourse(_student.StudentId, (int)comboCourse.SelectedValue, finalGrade);
 
@@ -171,6 +174,11 @@ namespace Examination.PresentationLayer.Forms
             flowLayoutPanel.Controls.Clear();
 
             btnSubmit.Visible = false;
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            CustomHelperManager.ExitHelper();
         }
     }
 }

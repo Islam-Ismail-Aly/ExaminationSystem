@@ -1,4 +1,5 @@
 ﻿using Examination.BussinessLogicLayer.Services;
+using Examination.PresentationLayer.Helpers;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
@@ -63,6 +64,11 @@ namespace Examination.PresentationLayer.Reports
             reportStudentQuestionAnswer.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", _dataSet.Tables["StudentQuestionWithAnswerExam"]));
             reportStudentQuestionAnswer.LocalReport.ReportEmbeddedResource = "Examination.PresentationLayer.Reports.StudentQuestionAnswersReport.rdlc";
             reportStudentQuestionAnswer.RefreshReport();
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            CustomHelperManager.ExitHelper();
         }
     }
 }

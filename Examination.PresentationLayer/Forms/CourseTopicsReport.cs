@@ -1,5 +1,6 @@
 ﻿using Examination.BussinessLogicLayer.Services;
 using Examination.DataAccessLayer.Data;
+using Examination.PresentationLayer.Helpers;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
@@ -42,7 +43,7 @@ namespace Examination.PresentationLayer.Forms
 
             _dataSet.CourseTopicsRep.Clear();
 
-            foreach ( var item in listTopics )
+            foreach (var item in listTopics)
             {
                 var row = _dataSet.CourseTopicsRep.NewCourseTopicsRepRow();
 
@@ -55,6 +56,11 @@ namespace Examination.PresentationLayer.Forms
             reportCourseTopics.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", _dataSet.Tables["CourseTopicsRep"]));
             reportCourseTopics.LocalReport.ReportEmbeddedResource = "Examination.PresentationLayer.Reports.CourseTopicsReport.rdlc";
             reportCourseTopics.RefreshReport();
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            CustomHelperManager.ExitHelper();
         }
     }
 }

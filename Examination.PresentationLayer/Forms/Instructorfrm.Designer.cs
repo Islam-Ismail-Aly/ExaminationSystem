@@ -28,23 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Instructorfrm));
             tabControl1 = new TabControl();
             tabProfile = new TabPage();
+            pictureBox6 = new PictureBox();
+            label5 = new Label();
+            pictureBox5 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            label9 = new Label();
+            label8 = new Label();
+            panel1 = new Panel();
+            label4 = new Label();
+            txtDateTime = new TextBox();
+            txtInstructorName = new TextBox();
+            pictureBox2 = new PictureBox();
+            txtUsername = new TextBox();
+            label6 = new Label();
+            pictureBox1 = new PictureBox();
             txtBranch = new TextBox();
             txtDepartment = new TextBox();
-            txtUsername = new TextBox();
-            txtInstructorName = new TextBox();
             dataGridCourses = new DataGridView();
-            label9 = new Label();
-            label5 = new Label();
-            label8 = new Label();
-            label7 = new Label();
-            label4 = new Label();
             tabAddQuestion = new TabPage();
-            btn_AddQuestion = new Button();
+            panel2 = new Panel();
+            pictureBox9 = new PictureBox();
+            comboCourse = new ComboBox();
+            btn_AddQuestion = new CustomMaterialDesign.RButton();
+            label2 = new Label();
+            pictureBox7 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            label3 = new Label();
+            comboQuestionType = new ComboBox();
             radioF = new RadioButton();
             radioT = new RadioButton();
             radioAnswerD = new RadioButton();
+            pictureBox8 = new PictureBox();
             radioAnswerC = new RadioButton();
             radioAnswerB = new RadioButton();
             radioAnswerA = new RadioButton();
@@ -52,33 +69,45 @@
             txtAnswerC = new TextBox();
             txtAnswerB = new TextBox();
             txtAnswerA = new TextBox();
-            comboCourse = new ComboBox();
-            comboQuestionType = new ComboBox();
             txtContent = new TextBox();
-            label3 = new Label();
             lblAnsD = new Label();
             lblAnsC = new Label();
             lblAnsB = new Label();
             lblAnsA = new Label();
             lblisCorrect = new Label();
-            label2 = new Label();
+            lblisCorrectTF = new Label();
             label1 = new Label();
             tabReport = new TabPage();
-            btnStudentQuestionAnswerExam = new Button();
-            btnQuestionAnswerExam = new Button();
-            btnCourseTopicfrm = new Button();
-            btnInstructorCoursefrm = new Button();
-            btnStudentCourseGradesfrm = new Button();
-            btnStudentDepartmentfrm = new Button();
-            groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
+            groupBox1 = new GroupBox();
+            btn_Exit = new PictureBox();
+            pictureBox10 = new PictureBox();
+            btnStudentDepartmentfrm = new CustomMaterialDesign.RButton();
+            btnStudentCourseGradesfrm = new CustomMaterialDesign.RButton();
+            btnCourseTopicfrm = new CustomMaterialDesign.RButton();
+            btnQuestionAnswerExam = new CustomMaterialDesign.RButton();
+            btnStudentQuestionAnswerExam = new CustomMaterialDesign.RButton();
+            btnInstructorCoursefrm = new CustomMaterialDesign.RButton();
             tabControl1.SuspendLayout();
             tabProfile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridCourses).BeginInit();
             tabAddQuestion.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             tabReport.SuspendLayout();
-            groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btn_Exit).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -87,150 +116,236 @@
             tabControl1.Controls.Add(tabAddQuestion);
             tabControl1.Controls.Add(tabReport);
             tabControl1.Font = new Font("Segoe UI", 3.5F, FontStyle.Bold, GraphicsUnit.Millimeter);
-            tabControl1.Location = new Point(3, 3);
+            tabControl1.ItemSize = new Size(60, 40);
+            tabControl1.Location = new Point(3, 35);
             tabControl1.Margin = new Padding(5, 6, 5, 6);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(990, 575);
+            tabControl1.Size = new Size(857, 476);
+            tabControl1.SizeMode = TabSizeMode.FillToRight;
             tabControl1.TabIndex = 0;
             // 
             // tabProfile
             // 
-            tabProfile.BackColor = Color.MintCream;
+            tabProfile.BackColor = Color.White;
+            tabProfile.Controls.Add(pictureBox6);
+            tabProfile.Controls.Add(label5);
+            tabProfile.Controls.Add(pictureBox5);
+            tabProfile.Controls.Add(pictureBox4);
+            tabProfile.Controls.Add(label9);
+            tabProfile.Controls.Add(label8);
+            tabProfile.Controls.Add(panel1);
+            tabProfile.Controls.Add(pictureBox2);
+            tabProfile.Controls.Add(txtUsername);
+            tabProfile.Controls.Add(label6);
+            tabProfile.Controls.Add(pictureBox10);
+            tabProfile.Controls.Add(pictureBox1);
             tabProfile.Controls.Add(txtBranch);
             tabProfile.Controls.Add(txtDepartment);
-            tabProfile.Controls.Add(txtUsername);
-            tabProfile.Controls.Add(txtInstructorName);
             tabProfile.Controls.Add(dataGridCourses);
-            tabProfile.Controls.Add(label9);
-            tabProfile.Controls.Add(label5);
-            tabProfile.Controls.Add(label8);
-            tabProfile.Controls.Add(label7);
-            tabProfile.Controls.Add(label4);
-            tabProfile.Location = new Point(4, 26);
+            tabProfile.Location = new Point(4, 44);
             tabProfile.Margin = new Padding(5, 6, 5, 6);
             tabProfile.Name = "tabProfile";
             tabProfile.Padding = new Padding(5, 6, 5, 6);
-            tabProfile.Size = new Size(982, 545);
+            tabProfile.Size = new Size(849, 428);
             tabProfile.TabIndex = 0;
-            tabProfile.Text = "Profile";
+            tabProfile.Text = "   Profile   ";
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(225, 198);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(28, 29);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 25;
+            pictureBox6.TabStop = false;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label5.Location = new Point(268, 202);
+            label5.Name = "label5";
+            label5.Size = new Size(61, 19);
+            label5.TabIndex = 24;
+            label5.Text = "Courses";
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(224, 135);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(28, 29);
+            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox5.TabIndex = 22;
+            pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(224, 82);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(28, 25);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 23;
+            pictureBox4.TabStop = false;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label9.Location = new Point(268, 85);
+            label9.Name = "label9";
+            label9.Size = new Size(55, 19);
+            label9.TabIndex = 20;
+            label9.Text = "Branch";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label8.Location = new Point(268, 141);
+            label8.Name = "label8";
+            label8.Size = new Size(89, 19);
+            label8.TabIndex = 21;
+            label8.Text = "Department";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.MediumPurple;
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(txtDateTime);
+            panel1.Controls.Add(txtInstructorName);
+            panel1.Location = new Point(204, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(770, 48);
+            panel1.TabIndex = 19;
+            panel1.Paint += panel1_Paint;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(7, 9);
+            label4.Name = "label4";
+            label4.Size = new Size(99, 28);
+            label4.TabIndex = 0;
+            label4.Text = "Welcome";
+            // 
+            // txtDateTime
+            // 
+            txtDateTime.BackColor = Color.MediumPurple;
+            txtDateTime.BorderStyle = BorderStyle.None;
+            txtDateTime.Font = new Font("Segoe UI", 4F, FontStyle.Bold, GraphicsUnit.Millimeter);
+            txtDateTime.ForeColor = Color.White;
+            txtDateTime.HideSelection = false;
+            txtDateTime.Location = new Point(447, 13);
+            txtDateTime.Name = "txtDateTime";
+            txtDateTime.ReadOnly = true;
+            txtDateTime.Size = new Size(186, 21);
+            txtDateTime.TabIndex = 2;
+            // 
+            // txtInstructorName
+            // 
+            txtInstructorName.BackColor = Color.MediumPurple;
+            txtInstructorName.BorderStyle = BorderStyle.None;
+            txtInstructorName.ForeColor = Color.White;
+            txtInstructorName.Location = new Point(112, 16);
+            txtInstructorName.Margin = new Padding(5, 6, 5, 6);
+            txtInstructorName.Name = "txtInstructorName";
+            txtInstructorName.ReadOnly = true;
+            txtInstructorName.Size = new Size(105, 18);
+            txtInstructorName.TabIndex = 14;
+            txtInstructorName.TextAlign = HorizontalAlignment.Center;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(29, 220);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(28, 25);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 18;
+            pictureBox2.TabStop = false;
+            // 
+            // txtUsername
+            // 
+            txtUsername.BackColor = Color.MediumPurple;
+            txtUsername.BorderStyle = BorderStyle.FixedSingle;
+            txtUsername.ForeColor = Color.White;
+            txtUsername.Location = new Point(19, 257);
+            txtUsername.Name = "txtUsername";
+            txtUsername.ReadOnly = true;
+            txtUsername.Size = new Size(166, 25);
+            txtUsername.TabIndex = 17;
+            txtUsername.TextAlign = HorizontalAlignment.Center;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label6.Location = new Point(63, 224);
+            label6.Name = "label6";
+            label6.Size = new Size(76, 19);
+            label6.TabIndex = 16;
+            label6.Text = "Username";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(3, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(195, 192);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 15;
+            pictureBox1.TabStop = false;
             // 
             // txtBranch
             // 
-            txtBranch.BackColor = Color.PowderBlue;
-            txtBranch.Location = new Point(562, 29);
+            txtBranch.BackColor = Color.MediumPurple;
+            txtBranch.BorderStyle = BorderStyle.FixedSingle;
+            txtBranch.ForeColor = Color.White;
+            txtBranch.Location = new Point(374, 83);
             txtBranch.Margin = new Padding(5, 6, 5, 6);
             txtBranch.Name = "txtBranch";
             txtBranch.ReadOnly = true;
-            txtBranch.Size = new Size(197, 25);
+            txtBranch.Size = new Size(183, 25);
             txtBranch.TabIndex = 10;
             txtBranch.TextAlign = HorizontalAlignment.Center;
             // 
             // txtDepartment
             // 
-            txtDepartment.BackColor = Color.PowderBlue;
-            txtDepartment.Location = new Point(562, 92);
+            txtDepartment.BackColor = Color.MediumPurple;
+            txtDepartment.BorderStyle = BorderStyle.FixedSingle;
+            txtDepartment.ForeColor = Color.White;
+            txtDepartment.Location = new Point(374, 141);
             txtDepartment.Margin = new Padding(5, 6, 5, 6);
             txtDepartment.Name = "txtDepartment";
             txtDepartment.ReadOnly = true;
-            txtDepartment.Size = new Size(197, 25);
+            txtDepartment.Size = new Size(183, 25);
             txtDepartment.TabIndex = 11;
             txtDepartment.TextAlign = HorizontalAlignment.Center;
             // 
-            // txtUsername
-            // 
-            txtUsername.BackColor = Color.PowderBlue;
-            txtUsername.Location = new Point(135, 98);
-            txtUsername.Margin = new Padding(5, 6, 5, 6);
-            txtUsername.Name = "txtUsername";
-            txtUsername.ReadOnly = true;
-            txtUsername.Size = new Size(197, 25);
-            txtUsername.TabIndex = 13;
-            txtUsername.TextAlign = HorizontalAlignment.Center;
-            // 
-            // txtInstructorName
-            // 
-            txtInstructorName.BackColor = Color.PowderBlue;
-            txtInstructorName.Location = new Point(135, 29);
-            txtInstructorName.Margin = new Padding(5, 6, 5, 6);
-            txtInstructorName.Name = "txtInstructorName";
-            txtInstructorName.ReadOnly = true;
-            txtInstructorName.Size = new Size(197, 25);
-            txtInstructorName.TabIndex = 14;
-            txtInstructorName.TextAlign = HorizontalAlignment.Center;
-            // 
             // dataGridCourses
             // 
-            dataGridCourses.BackgroundColor = Color.PowderBlue;
+            dataGridCourses.BackgroundColor = Color.Azure;
             dataGridCourses.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridCourses.Location = new Point(135, 161);
+            dataGridCourses.Location = new Point(374, 198);
             dataGridCourses.Margin = new Padding(5, 6, 5, 6);
             dataGridCourses.Name = "dataGridCourses";
-            dataGridCourses.Size = new Size(243, 94);
+            dataGridCourses.Size = new Size(183, 94);
             dataGridCourses.TabIndex = 9;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 10F);
-            label9.Location = new Point(436, 29);
-            label9.Margin = new Padding(5, 0, 5, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(58, 19);
-            label9.TabIndex = 3;
-            label9.Text = "Branch :";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 10F);
-            label5.Location = new Point(13, 161);
-            label5.Margin = new Padding(5, 0, 5, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(65, 19);
-            label5.TabIndex = 4;
-            label5.Text = "Courses :";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 10F);
-            label8.Location = new Point(436, 92);
-            label8.Margin = new Padding(5, 0, 5, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(90, 19);
-            label8.TabIndex = 5;
-            label8.Text = "Department :";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 10F);
-            label7.Location = new Point(13, 98);
-            label7.Margin = new Padding(5, 0, 5, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(78, 19);
-            label7.TabIndex = 7;
-            label7.Text = "Username :";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 10F);
-            label4.Location = new Point(13, 29);
-            label4.Margin = new Padding(5, 0, 5, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(52, 19);
-            label4.TabIndex = 8;
-            label4.Text = "Name :";
             // 
             // tabAddQuestion
             // 
-            tabAddQuestion.BackColor = Color.MintCream;
-            tabAddQuestion.Controls.Add(btn_AddQuestion);
+            tabAddQuestion.BackColor = Color.White;
+            tabAddQuestion.Controls.Add(panel2);
             tabAddQuestion.Controls.Add(radioF);
             tabAddQuestion.Controls.Add(radioT);
             tabAddQuestion.Controls.Add(radioAnswerD);
+            tabAddQuestion.Controls.Add(pictureBox8);
             tabAddQuestion.Controls.Add(radioAnswerC);
             tabAddQuestion.Controls.Add(radioAnswerB);
             tabAddQuestion.Controls.Add(radioAnswerA);
@@ -238,45 +353,133 @@
             tabAddQuestion.Controls.Add(txtAnswerC);
             tabAddQuestion.Controls.Add(txtAnswerB);
             tabAddQuestion.Controls.Add(txtAnswerA);
-            tabAddQuestion.Controls.Add(comboCourse);
-            tabAddQuestion.Controls.Add(comboQuestionType);
             tabAddQuestion.Controls.Add(txtContent);
-            tabAddQuestion.Controls.Add(label3);
             tabAddQuestion.Controls.Add(lblAnsD);
             tabAddQuestion.Controls.Add(lblAnsC);
             tabAddQuestion.Controls.Add(lblAnsB);
             tabAddQuestion.Controls.Add(lblAnsA);
             tabAddQuestion.Controls.Add(lblisCorrect);
-            tabAddQuestion.Controls.Add(label2);
+            tabAddQuestion.Controls.Add(lblisCorrectTF);
             tabAddQuestion.Controls.Add(label1);
-            tabAddQuestion.Location = new Point(4, 26);
+            tabAddQuestion.Location = new Point(4, 44);
             tabAddQuestion.Margin = new Padding(5, 6, 5, 6);
             tabAddQuestion.Name = "tabAddQuestion";
             tabAddQuestion.Padding = new Padding(5, 6, 5, 6);
-            tabAddQuestion.Size = new Size(982, 545);
+            tabAddQuestion.Size = new Size(849, 428);
             tabAddQuestion.TabIndex = 1;
-            tabAddQuestion.Text = "Add Question";
+            tabAddQuestion.Text = "   Add Question   ";
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.MediumPurple;
+            panel2.Controls.Add(pictureBox9);
+            panel2.Controls.Add(comboCourse);
+            panel2.Controls.Add(btn_AddQuestion);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(pictureBox7);
+            panel2.Controls.Add(pictureBox3);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(comboQuestionType);
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(320, 428);
+            panel2.TabIndex = 28;
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
+            pictureBox9.Location = new Point(78, 185);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(166, 123);
+            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox9.TabIndex = 28;
+            pictureBox9.TabStop = false;
+            // 
+            // comboCourse
+            // 
+            comboCourse.FormattingEnabled = true;
+            comboCourse.Location = new Point(156, 27);
+            comboCourse.Margin = new Padding(5, 6, 5, 6);
+            comboCourse.Name = "comboCourse";
+            comboCourse.Size = new Size(153, 25);
+            comboCourse.TabIndex = 2;
             // 
             // btn_AddQuestion
             // 
-            btn_AddQuestion.BackColor = Color.DeepSkyBlue;
+            btn_AddQuestion.BackColor = Color.DarkTurquoise;
+            btn_AddQuestion.BackgroundColor = Color.DarkTurquoise;
+            btn_AddQuestion.BorderColor = Color.White;
+            btn_AddQuestion.BorderRadius = 20;
+            btn_AddQuestion.BorderSize = 0;
             btn_AddQuestion.FlatAppearance.BorderSize = 0;
             btn_AddQuestion.FlatStyle = FlatStyle.Flat;
-            btn_AddQuestion.Font = new Font("Segoe UI", 11F);
+            btn_AddQuestion.Font = new Font("Microsoft Sans Serif", 10.5F);
             btn_AddQuestion.ForeColor = Color.White;
-            btn_AddQuestion.Location = new Point(36, 223);
-            btn_AddQuestion.Margin = new Padding(5, 6, 5, 6);
+            btn_AddQuestion.Location = new Point(89, 352);
             btn_AddQuestion.Name = "btn_AddQuestion";
-            btn_AddQuestion.Size = new Size(126, 37);
-            btn_AddQuestion.TabIndex = 6;
+            btn_AddQuestion.Size = new Size(142, 40);
+            btn_AddQuestion.TabIndex = 27;
             btn_AddQuestion.Text = "Create";
+            btn_AddQuestion.TextColor = Color.White;
             btn_AddQuestion.UseVisualStyleBackColor = false;
             btn_AddQuestion.Click += btn_AddQuestion_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(42, 117);
+            label2.Margin = new Padding(5, 0, 5, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(104, 19);
+            label2.TabIndex = 0;
+            label2.Text = "Question Type";
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(9, 113);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(28, 29);
+            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox7.TabIndex = 26;
+            pictureBox7.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(9, 23);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(28, 29);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 26;
+            pictureBox3.TabStop = false;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(42, 27);
+            label3.Margin = new Padding(5, 0, 5, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(55, 19);
+            label3.TabIndex = 0;
+            label3.Text = "Course";
+            // 
+            // comboQuestionType
+            // 
+            comboQuestionType.FormattingEnabled = true;
+            comboQuestionType.Location = new Point(156, 117);
+            comboQuestionType.Margin = new Padding(5, 6, 5, 6);
+            comboQuestionType.Name = "comboQuestionType";
+            comboQuestionType.Size = new Size(153, 25);
+            comboQuestionType.TabIndex = 2;
+            comboQuestionType.SelectedIndexChanged += comboQuestionType_SelectedIndexChanged;
             // 
             // radioF
             // 
             radioF.AutoSize = true;
-            radioF.Location = new Point(675, 70);
+            radioF.Location = new Point(493, 105);
             radioF.Margin = new Padding(5, 6, 5, 6);
             radioF.Name = "radioF";
             radioF.Size = new Size(34, 23);
@@ -288,7 +491,7 @@
             // radioT
             // 
             radioT.AutoSize = true;
-            radioT.Location = new Point(620, 69);
+            radioT.Location = new Point(438, 104);
             radioT.Margin = new Padding(5, 6, 5, 6);
             radioT.Name = "radioT";
             radioT.Size = new Size(35, 23);
@@ -300,7 +503,7 @@
             // radioAnswerD
             // 
             radioAnswerD.AutoSize = true;
-            radioAnswerD.Location = new Point(615, 351);
+            radioAnswerD.Location = new Point(345, 364);
             radioAnswerD.Margin = new Padding(5, 6, 5, 6);
             radioAnswerD.Name = "radioAnswerD";
             radioAnswerD.Size = new Size(14, 13);
@@ -308,10 +511,20 @@
             radioAnswerD.TabStop = true;
             radioAnswerD.UseVisualStyleBackColor = true;
             // 
+            // pictureBox8
+            // 
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(340, 22);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(28, 29);
+            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.TabIndex = 26;
+            pictureBox8.TabStop = false;
+            // 
             // radioAnswerC
             // 
             radioAnswerC.AutoSize = true;
-            radioAnswerC.Location = new Point(615, 287);
+            radioAnswerC.Location = new Point(345, 300);
             radioAnswerC.Margin = new Padding(5, 6, 5, 6);
             radioAnswerC.Name = "radioAnswerC";
             radioAnswerC.Size = new Size(14, 13);
@@ -322,7 +535,7 @@
             // radioAnswerB
             // 
             radioAnswerB.AutoSize = true;
-            radioAnswerB.Location = new Point(615, 229);
+            radioAnswerB.Location = new Point(345, 242);
             radioAnswerB.Margin = new Padding(5, 6, 5, 6);
             radioAnswerB.Name = "radioAnswerB";
             radioAnswerB.Size = new Size(14, 13);
@@ -333,7 +546,7 @@
             // radioAnswerA
             // 
             radioAnswerA.AutoSize = true;
-            radioAnswerA.Location = new Point(615, 168);
+            radioAnswerA.Location = new Point(345, 181);
             radioAnswerA.Margin = new Padding(5, 6, 5, 6);
             radioAnswerA.Name = "radioAnswerA";
             radioAnswerA.Size = new Size(14, 13);
@@ -343,7 +556,7 @@
             // 
             // txtAnswerD
             // 
-            txtAnswerD.Location = new Point(754, 345);
+            txtAnswerD.Location = new Point(484, 358);
             txtAnswerD.Margin = new Padding(5, 6, 5, 6);
             txtAnswerD.Name = "txtAnswerD";
             txtAnswerD.Size = new Size(197, 25);
@@ -351,7 +564,7 @@
             // 
             // txtAnswerC
             // 
-            txtAnswerC.Location = new Point(754, 280);
+            txtAnswerC.Location = new Point(484, 293);
             txtAnswerC.Margin = new Padding(5, 6, 5, 6);
             txtAnswerC.Name = "txtAnswerC";
             txtAnswerC.Size = new Size(197, 25);
@@ -359,7 +572,7 @@
             // 
             // txtAnswerB
             // 
-            txtAnswerB.Location = new Point(754, 223);
+            txtAnswerB.Location = new Point(484, 236);
             txtAnswerB.Margin = new Padding(5, 6, 5, 6);
             txtAnswerB.Name = "txtAnswerB";
             txtAnswerB.Size = new Size(197, 25);
@@ -367,54 +580,25 @@
             // 
             // txtAnswerA
             // 
-            txtAnswerA.Location = new Point(754, 158);
+            txtAnswerA.Location = new Point(484, 171);
             txtAnswerA.Margin = new Padding(5, 6, 5, 6);
             txtAnswerA.Name = "txtAnswerA";
             txtAnswerA.Size = new Size(197, 25);
             txtAnswerA.TabIndex = 3;
             // 
-            // comboCourse
-            // 
-            comboCourse.FormattingEnabled = true;
-            comboCourse.Location = new Point(113, 140);
-            comboCourse.Margin = new Padding(5, 6, 5, 6);
-            comboCourse.Name = "comboCourse";
-            comboCourse.Size = new Size(153, 25);
-            comboCourse.TabIndex = 2;
-            // 
-            // comboQuestionType
-            // 
-            comboQuestionType.FormattingEnabled = true;
-            comboQuestionType.Location = new Point(743, 29);
-            comboQuestionType.Margin = new Padding(5, 6, 5, 6);
-            comboQuestionType.Name = "comboQuestionType";
-            comboQuestionType.Size = new Size(153, 25);
-            comboQuestionType.TabIndex = 2;
-            comboQuestionType.SelectedIndexChanged += comboQuestionType_SelectedIndexChanged;
-            // 
             // txtContent
             // 
-            txtContent.Location = new Point(172, 29);
+            txtContent.Location = new Point(525, 24);
             txtContent.Margin = new Padding(5, 6, 5, 6);
             txtContent.Multiline = true;
             txtContent.Name = "txtContent";
-            txtContent.Size = new Size(315, 67);
+            txtContent.Size = new Size(310, 59);
             txtContent.TabIndex = 1;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(23, 140);
-            label3.Margin = new Padding(5, 0, 5, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(63, 19);
-            label3.TabIndex = 0;
-            label3.Text = "Course :";
             // 
             // lblAnsD
             // 
             lblAnsD.AutoSize = true;
-            lblAnsD.Location = new Point(639, 347);
+            lblAnsD.Location = new Point(369, 360);
             lblAnsD.Margin = new Padding(5, 0, 5, 0);
             lblAnsD.Name = "lblAnsD";
             lblAnsD.Size = new Size(90, 19);
@@ -424,7 +608,7 @@
             // lblAnsC
             // 
             lblAnsC.AutoSize = true;
-            lblAnsC.Location = new Point(639, 283);
+            lblAnsC.Location = new Point(369, 296);
             lblAnsC.Margin = new Padding(5, 0, 5, 0);
             lblAnsC.Name = "lblAnsC";
             lblAnsC.Size = new Size(89, 19);
@@ -434,7 +618,7 @@
             // lblAnsB
             // 
             lblAnsB.AutoSize = true;
-            lblAnsB.Location = new Point(639, 225);
+            lblAnsB.Location = new Point(369, 238);
             lblAnsB.Margin = new Padding(5, 0, 5, 0);
             lblAnsB.Name = "lblAnsB";
             lblAnsB.Size = new Size(89, 19);
@@ -444,7 +628,7 @@
             // lblAnsA
             // 
             lblAnsA.AutoSize = true;
-            lblAnsA.Location = new Point(639, 162);
+            lblAnsA.Location = new Point(369, 175);
             lblAnsA.Margin = new Padding(5, 0, 5, 0);
             lblAnsA.Name = "lblAnsA";
             lblAnsA.Size = new Size(90, 19);
@@ -454,189 +638,260 @@
             // lblisCorrect
             // 
             lblisCorrect.AutoSize = true;
-            lblisCorrect.Location = new Point(615, 120);
+            lblisCorrect.Location = new Point(340, 139);
             lblisCorrect.Margin = new Padding(5, 0, 5, 0);
             lblisCorrect.Name = "lblisCorrect";
             lblisCorrect.Size = new Size(73, 19);
             lblisCorrect.TabIndex = 0;
             lblisCorrect.Text = "Is Correct";
             // 
-            // label2
+            // lblisCorrectTF
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(617, 29);
-            label2.Margin = new Padding(5, 0, 5, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(112, 19);
-            label2.TabIndex = 0;
-            label2.Text = "Question Type :";
+            lblisCorrectTF.AutoSize = true;
+            lblisCorrectTF.Location = new Point(340, 106);
+            lblisCorrectTF.Margin = new Padding(5, 0, 5, 0);
+            lblisCorrectTF.Name = "lblisCorrectTF";
+            lblisCorrectTF.Size = new Size(73, 19);
+            lblisCorrectTF.TabIndex = 0;
+            lblisCorrectTF.Text = "Is Correct";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(23, 29);
+            label1.Location = new Point(387, 27);
             label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(132, 19);
+            label1.Size = new Size(124, 19);
             label1.TabIndex = 0;
-            label1.Text = "Question Content :";
+            label1.Text = "Question Content";
             // 
             // tabReport
             // 
             tabReport.BackColor = Color.MintCream;
             tabReport.Controls.Add(groupBox2);
             tabReport.Controls.Add(groupBox1);
-            tabReport.Location = new Point(4, 26);
+            tabReport.Location = new Point(4, 44);
             tabReport.Margin = new Padding(5, 6, 5, 6);
             tabReport.Name = "tabReport";
             tabReport.Padding = new Padding(5, 6, 5, 6);
-            tabReport.Size = new Size(982, 545);
+            tabReport.Size = new Size(849, 428);
             tabReport.TabIndex = 2;
-            tabReport.Text = "Reports";
-            // 
-            // btnStudentQuestionAnswerExam
-            // 
-            btnStudentQuestionAnswerExam.BackColor = Color.SlateBlue;
-            btnStudentQuestionAnswerExam.FlatAppearance.BorderSize = 0;
-            btnStudentQuestionAnswerExam.FlatStyle = FlatStyle.Flat;
-            btnStudentQuestionAnswerExam.Font = new Font("Segoe UI", 10F);
-            btnStudentQuestionAnswerExam.ForeColor = Color.White;
-            btnStudentQuestionAnswerExam.Location = new Point(323, 39);
-            btnStudentQuestionAnswerExam.Margin = new Padding(5, 6, 5, 6);
-            btnStudentQuestionAnswerExam.Name = "btnStudentQuestionAnswerExam";
-            btnStudentQuestionAnswerExam.Size = new Size(210, 51);
-            btnStudentQuestionAnswerExam.TabIndex = 7;
-            btnStudentQuestionAnswerExam.Text = "Student Question Answer Exam Report";
-            btnStudentQuestionAnswerExam.UseVisualStyleBackColor = false;
-            btnStudentQuestionAnswerExam.Click += btnStudentQuestionAnswerExam_Click;
-            // 
-            // btnQuestionAnswerExam
-            // 
-            btnQuestionAnswerExam.BackColor = Color.SlateBlue;
-            btnQuestionAnswerExam.FlatAppearance.BorderSize = 0;
-            btnQuestionAnswerExam.FlatStyle = FlatStyle.Flat;
-            btnQuestionAnswerExam.Font = new Font("Segoe UI", 10F);
-            btnQuestionAnswerExam.ForeColor = Color.White;
-            btnQuestionAnswerExam.Location = new Point(43, 39);
-            btnQuestionAnswerExam.Margin = new Padding(5, 6, 5, 6);
-            btnQuestionAnswerExam.Name = "btnQuestionAnswerExam";
-            btnQuestionAnswerExam.Size = new Size(210, 51);
-            btnQuestionAnswerExam.TabIndex = 7;
-            btnQuestionAnswerExam.Text = "Question Answer Exam Report";
-            btnQuestionAnswerExam.UseVisualStyleBackColor = false;
-            btnQuestionAnswerExam.Click += btnQuestionAnswerExam_Click;
-            // 
-            // btnCourseTopicfrm
-            // 
-            btnCourseTopicfrm.BackColor = Color.CadetBlue;
-            btnCourseTopicfrm.FlatAppearance.BorderSize = 0;
-            btnCourseTopicfrm.FlatStyle = FlatStyle.Flat;
-            btnCourseTopicfrm.Font = new Font("Segoe UI", 10F);
-            btnCourseTopicfrm.ForeColor = Color.White;
-            btnCourseTopicfrm.Location = new Point(609, 49);
-            btnCourseTopicfrm.Margin = new Padding(5, 6, 5, 6);
-            btnCourseTopicfrm.Name = "btnCourseTopicfrm";
-            btnCourseTopicfrm.Size = new Size(201, 51);
-            btnCourseTopicfrm.TabIndex = 7;
-            btnCourseTopicfrm.Text = "Course Topic Report";
-            btnCourseTopicfrm.UseVisualStyleBackColor = false;
-            btnCourseTopicfrm.Click += btnCourseTopicfrm_Click;
-            // 
-            // btnInstructorCoursefrm
-            // 
-            btnInstructorCoursefrm.BackColor = Color.CadetBlue;
-            btnInstructorCoursefrm.FlatAppearance.BorderSize = 0;
-            btnInstructorCoursefrm.FlatStyle = FlatStyle.Flat;
-            btnInstructorCoursefrm.Font = new Font("Segoe UI", 10F);
-            btnInstructorCoursefrm.ForeColor = Color.White;
-            btnInstructorCoursefrm.Location = new Point(609, 39);
-            btnInstructorCoursefrm.Margin = new Padding(5, 6, 5, 6);
-            btnInstructorCoursefrm.Name = "btnInstructorCoursefrm";
-            btnInstructorCoursefrm.Size = new Size(201, 51);
-            btnInstructorCoursefrm.TabIndex = 7;
-            btnInstructorCoursefrm.Text = "Instructor Course Report";
-            btnInstructorCoursefrm.UseVisualStyleBackColor = false;
-            btnInstructorCoursefrm.Click += btnInstructorCoursefrm_Click;
-            // 
-            // btnStudentCourseGradesfrm
-            // 
-            btnStudentCourseGradesfrm.BackColor = SystemColors.MenuHighlight;
-            btnStudentCourseGradesfrm.FlatAppearance.BorderSize = 0;
-            btnStudentCourseGradesfrm.FlatStyle = FlatStyle.Flat;
-            btnStudentCourseGradesfrm.Font = new Font("Segoe UI", 10F);
-            btnStudentCourseGradesfrm.ForeColor = Color.White;
-            btnStudentCourseGradesfrm.Location = new Point(323, 49);
-            btnStudentCourseGradesfrm.Margin = new Padding(5, 6, 5, 6);
-            btnStudentCourseGradesfrm.Name = "btnStudentCourseGradesfrm";
-            btnStudentCourseGradesfrm.Size = new Size(201, 51);
-            btnStudentCourseGradesfrm.TabIndex = 7;
-            btnStudentCourseGradesfrm.Text = "Student Course Grades Report";
-            btnStudentCourseGradesfrm.UseVisualStyleBackColor = false;
-            btnStudentCourseGradesfrm.Click += btnStudentCourseGradesfrm_Click;
-            // 
-            // btnStudentDepartmentfrm
-            // 
-            btnStudentDepartmentfrm.BackColor = SystemColors.MenuHighlight;
-            btnStudentDepartmentfrm.FlatAppearance.BorderSize = 0;
-            btnStudentDepartmentfrm.FlatStyle = FlatStyle.Flat;
-            btnStudentDepartmentfrm.Font = new Font("Segoe UI", 10F);
-            btnStudentDepartmentfrm.ForeColor = Color.White;
-            btnStudentDepartmentfrm.Location = new Point(43, 49);
-            btnStudentDepartmentfrm.Margin = new Padding(5, 6, 5, 6);
-            btnStudentDepartmentfrm.Name = "btnStudentDepartmentfrm";
-            btnStudentDepartmentfrm.Size = new Size(201, 51);
-            btnStudentDepartmentfrm.TabIndex = 7;
-            btnStudentDepartmentfrm.Text = "Student Department Report";
-            btnStudentDepartmentfrm.UseVisualStyleBackColor = false;
-            btnStudentDepartmentfrm.Click += btnStudentDepartmentfrm_Click;
-            // 
-            // groupBox1
-            // 
-            groupBox1.BackColor = Color.AliceBlue;
-            groupBox1.Controls.Add(btnStudentDepartmentfrm);
-            groupBox1.Controls.Add(btnStudentCourseGradesfrm);
-            groupBox1.Controls.Add(btnCourseTopicfrm);
-            groupBox1.Location = new Point(10, 39);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(856, 137);
-            groupBox1.TabIndex = 8;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Student | Department | Course Reports ";
+            tabReport.Text = "   Reports   ";
             // 
             // groupBox2
             // 
             groupBox2.BackColor = Color.AliceBlue;
-            groupBox2.Controls.Add(btnQuestionAnswerExam);
             groupBox2.Controls.Add(btnInstructorCoursefrm);
+            groupBox2.Controls.Add(btnQuestionAnswerExam);
             groupBox2.Controls.Add(btnStudentQuestionAnswerExam);
-            groupBox2.Location = new Point(10, 278);
+            groupBox2.Location = new Point(10, 270);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(856, 132);
+            groupBox2.Size = new Size(821, 140);
             groupBox2.TabIndex = 9;
             groupBox2.TabStop = false;
             groupBox2.Text = "Exam | Question | Instructor Reports ";
+            // 
+            // groupBox1
+            // 
+            groupBox1.BackColor = Color.AliceBlue;
+            groupBox1.Controls.Add(btnCourseTopicfrm);
+            groupBox1.Controls.Add(btnStudentCourseGradesfrm);
+            groupBox1.Controls.Add(btnStudentDepartmentfrm);
+            groupBox1.Location = new Point(10, 39);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(821, 137);
+            groupBox1.TabIndex = 8;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Student | Department | Course Reports ";
+            // 
+            // btn_Exit
+            // 
+            btn_Exit.Image = (Image)resources.GetObject("btn_Exit.Image");
+            btn_Exit.Location = new Point(825, 3);
+            btn_Exit.Name = "btn_Exit";
+            btn_Exit.Size = new Size(35, 28);
+            btn_Exit.SizeMode = PictureBoxSizeMode.Zoom;
+            btn_Exit.TabIndex = 2;
+            btn_Exit.TabStop = false;
+            btn_Exit.Click += btn_Exit_Click;
+            // 
+            // pictureBox10
+            // 
+            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
+            pictureBox10.Location = new Point(601, 90);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(224, 246);
+            pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox10.TabIndex = 15;
+            pictureBox10.TabStop = false;
+            // 
+            // btnStudentDepartmentfrm
+            // 
+            btnStudentDepartmentfrm.BackColor = SystemColors.MenuHighlight;
+            btnStudentDepartmentfrm.BackgroundColor = SystemColors.MenuHighlight;
+            btnStudentDepartmentfrm.BorderColor = Color.White;
+            btnStudentDepartmentfrm.BorderRadius = 20;
+            btnStudentDepartmentfrm.BorderSize = 0;
+            btnStudentDepartmentfrm.FlatAppearance.BorderSize = 0;
+            btnStudentDepartmentfrm.FlatStyle = FlatStyle.Flat;
+            btnStudentDepartmentfrm.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Bold);
+            btnStudentDepartmentfrm.ForeColor = Color.White;
+            btnStudentDepartmentfrm.Image = (Image)resources.GetObject("btnStudentDepartmentfrm.Image");
+            btnStudentDepartmentfrm.ImageAlign = ContentAlignment.MiddleLeft;
+            btnStudentDepartmentfrm.Location = new Point(18, 49);
+            btnStudentDepartmentfrm.Margin = new Padding(5);
+            btnStudentDepartmentfrm.Name = "btnStudentDepartmentfrm";
+            btnStudentDepartmentfrm.Size = new Size(251, 51);
+            btnStudentDepartmentfrm.TabIndex = 28;
+            btnStudentDepartmentfrm.Text = "    Student Department Report";
+            btnStudentDepartmentfrm.TextColor = Color.White;
+            btnStudentDepartmentfrm.UseVisualStyleBackColor = false;
+            btnStudentDepartmentfrm.Click += btnStudentDepartmentfrm_Click;
+            // 
+            // btnStudentCourseGradesfrm
+            // 
+            btnStudentCourseGradesfrm.BackColor = SystemColors.MenuHighlight;
+            btnStudentCourseGradesfrm.BackgroundColor = SystemColors.MenuHighlight;
+            btnStudentCourseGradesfrm.BorderColor = Color.White;
+            btnStudentCourseGradesfrm.BorderRadius = 20;
+            btnStudentCourseGradesfrm.BorderSize = 0;
+            btnStudentCourseGradesfrm.FlatAppearance.BorderSize = 0;
+            btnStudentCourseGradesfrm.FlatStyle = FlatStyle.Flat;
+            btnStudentCourseGradesfrm.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Bold);
+            btnStudentCourseGradesfrm.ForeColor = Color.White;
+            btnStudentCourseGradesfrm.Image = (Image)resources.GetObject("btnStudentCourseGradesfrm.Image");
+            btnStudentCourseGradesfrm.ImageAlign = ContentAlignment.MiddleLeft;
+            btnStudentCourseGradesfrm.Location = new Point(295, 49);
+            btnStudentCourseGradesfrm.Name = "btnStudentCourseGradesfrm";
+            btnStudentCourseGradesfrm.Size = new Size(264, 51);
+            btnStudentCourseGradesfrm.TabIndex = 28;
+            btnStudentCourseGradesfrm.Text = "      Student Course Grades Report";
+            btnStudentCourseGradesfrm.TextColor = Color.White;
+            btnStudentCourseGradesfrm.UseVisualStyleBackColor = false;
+            btnStudentCourseGradesfrm.Click += btnStudentCourseGradesfrm_Click;
+            // 
+            // btnCourseTopicfrm
+            // 
+            btnCourseTopicfrm.BackColor = Color.DarkTurquoise;
+            btnCourseTopicfrm.BackgroundColor = Color.DarkTurquoise;
+            btnCourseTopicfrm.BorderColor = Color.White;
+            btnCourseTopicfrm.BorderRadius = 20;
+            btnCourseTopicfrm.BorderSize = 0;
+            btnCourseTopicfrm.FlatAppearance.BorderSize = 0;
+            btnCourseTopicfrm.FlatStyle = FlatStyle.Flat;
+            btnCourseTopicfrm.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Bold);
+            btnCourseTopicfrm.ForeColor = Color.White;
+            btnCourseTopicfrm.Location = new Point(589, 49);
+            btnCourseTopicfrm.Name = "btnCourseTopicfrm";
+            btnCourseTopicfrm.Size = new Size(206, 51);
+            btnCourseTopicfrm.TabIndex = 28;
+            btnCourseTopicfrm.Text = "Course Topic Report";
+            btnCourseTopicfrm.TextColor = Color.White;
+            btnCourseTopicfrm.UseVisualStyleBackColor = false;
+            btnCourseTopicfrm.Click += btnCourseTopicfrm_Click;
+            // 
+            // btnQuestionAnswerExam
+            // 
+            btnQuestionAnswerExam.BackColor = Color.MediumPurple;
+            btnQuestionAnswerExam.BackgroundColor = Color.MediumPurple;
+            btnQuestionAnswerExam.BorderColor = Color.White;
+            btnQuestionAnswerExam.BorderRadius = 20;
+            btnQuestionAnswerExam.BorderSize = 0;
+            btnQuestionAnswerExam.FlatAppearance.BorderSize = 0;
+            btnQuestionAnswerExam.FlatStyle = FlatStyle.Flat;
+            btnQuestionAnswerExam.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Bold);
+            btnQuestionAnswerExam.ForeColor = Color.White;
+            btnQuestionAnswerExam.ImageAlign = ContentAlignment.MiddleLeft;
+            btnQuestionAnswerExam.Location = new Point(18, 49);
+            btnQuestionAnswerExam.Name = "btnQuestionAnswerExam";
+            btnQuestionAnswerExam.Size = new Size(251, 51);
+            btnQuestionAnswerExam.TabIndex = 28;
+            btnQuestionAnswerExam.Text = "     Question Answer Exam Report";
+            btnQuestionAnswerExam.TextColor = Color.White;
+            btnQuestionAnswerExam.UseVisualStyleBackColor = false;
+            btnQuestionAnswerExam.Click += btnQuestionAnswerExam_Click;
+            // 
+            // btnStudentQuestionAnswerExam
+            // 
+            btnStudentQuestionAnswerExam.BackColor = Color.MediumPurple;
+            btnStudentQuestionAnswerExam.BackgroundColor = Color.MediumPurple;
+            btnStudentQuestionAnswerExam.BorderColor = Color.White;
+            btnStudentQuestionAnswerExam.BorderRadius = 20;
+            btnStudentQuestionAnswerExam.BorderSize = 0;
+            btnStudentQuestionAnswerExam.FlatAppearance.BorderSize = 0;
+            btnStudentQuestionAnswerExam.FlatStyle = FlatStyle.Flat;
+            btnStudentQuestionAnswerExam.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Bold);
+            btnStudentQuestionAnswerExam.ForeColor = Color.White;
+            btnStudentQuestionAnswerExam.ImageAlign = ContentAlignment.MiddleLeft;
+            btnStudentQuestionAnswerExam.Location = new Point(297, 49);
+            btnStudentQuestionAnswerExam.Name = "btnStudentQuestionAnswerExam";
+            btnStudentQuestionAnswerExam.Size = new Size(270, 51);
+            btnStudentQuestionAnswerExam.TabIndex = 28;
+            btnStudentQuestionAnswerExam.Text = "Student Question Answer Exam Report";
+            btnStudentQuestionAnswerExam.TextColor = Color.White;
+            btnStudentQuestionAnswerExam.UseVisualStyleBackColor = false;
+            btnStudentQuestionAnswerExam.Click += btnStudentQuestionAnswerExam_Click;
+            // 
+            // btnInstructorCoursefrm
+            // 
+            btnInstructorCoursefrm.BackColor = Color.DarkTurquoise;
+            btnInstructorCoursefrm.BackgroundColor = Color.DarkTurquoise;
+            btnInstructorCoursefrm.BorderColor = Color.White;
+            btnInstructorCoursefrm.BorderRadius = 20;
+            btnInstructorCoursefrm.BorderSize = 0;
+            btnInstructorCoursefrm.FlatAppearance.BorderSize = 0;
+            btnInstructorCoursefrm.FlatStyle = FlatStyle.Flat;
+            btnInstructorCoursefrm.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Bold);
+            btnInstructorCoursefrm.ForeColor = Color.White;
+            btnInstructorCoursefrm.Location = new Point(609, 49);
+            btnInstructorCoursefrm.Name = "btnInstructorCoursefrm";
+            btnInstructorCoursefrm.Size = new Size(206, 51);
+            btnInstructorCoursefrm.TabIndex = 28;
+            btnInstructorCoursefrm.Text = "Instructor Course Report";
+            btnInstructorCoursefrm.TextColor = Color.White;
+            btnInstructorCoursefrm.UseVisualStyleBackColor = false;
+            btnInstructorCoursefrm.Click += btnInstructorCoursefrm_Click;
             // 
             // Instructorfrm
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(991, 579);
+            BackColor = Color.AliceBlue;
+            ClientSize = new Size(863, 516);
+            Controls.Add(btn_Exit);
             Controls.Add(tabControl1);
             Font = new Font("Segoe UI", 4.5F, FontStyle.Regular, GraphicsUnit.Millimeter);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(5, 6, 5, 6);
             Name = "Instructorfrm";
             ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Instructor";
             Load += Instructorfrm_Load;
             tabControl1.ResumeLayout(false);
             tabProfile.ResumeLayout(false);
             tabProfile.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridCourses).EndInit();
             tabAddQuestion.ResumeLayout(false);
             tabAddQuestion.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             tabReport.ResumeLayout(false);
-            groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
+            groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)btn_Exit).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ResumeLayout(false);
         }
 
@@ -647,14 +902,8 @@
         private TabPage tabAddQuestion;
         private TextBox txtBranch;
         private TextBox txtDepartment;
-        private TextBox txtUsername;
         private TextBox txtInstructorName;
         private DataGridView dataGridCourses;
-        private Label label9;
-        private Label label5;
-        private Label label8;
-        private Label label7;
-        private Label label4;
         private Label label2;
         private Label label1;
         private ComboBox comboCourse;
@@ -673,18 +922,40 @@
         private RadioButton radioAnswerC;
         private RadioButton radioAnswerB;
         private RadioButton radioAnswerA;
-        private Label lblisCorrect;
+        private Label lblisCorrectTF;
         private RadioButton radioF;
         private RadioButton radioT;
-        private Button btn_AddQuestion;
         private TabPage tabReport;
-        private Button btnStudentDepartmentfrm;
-        private Button btnInstructorCoursefrm;
-        private Button btnStudentCourseGradesfrm;
-        private Button btnCourseTopicfrm;
-        private Button btnQuestionAnswerExam;
-        private Button btnStudentQuestionAnswerExam;
+        private Button btnQuestionAnswerExam1;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
+        private PictureBox btn_Exit;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private TextBox txtUsername;
+        private Label label6;
+        private Panel panel1;
+        private Label label4;
+        private TextBox txtDateTime;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox4;
+        private Label label9;
+        private Label label8;
+        private PictureBox pictureBox6;
+        private Label label5;
+        private PictureBox pictureBox3;
+        private CustomMaterialDesign.RButton btn_AddQuestion;
+        private Panel panel2;
+        private PictureBox pictureBox7;
+        private PictureBox pictureBox8;
+        private Label lblisCorrect;
+        private PictureBox pictureBox9;
+        private PictureBox pictureBox10;
+        private CustomMaterialDesign.RButton btnStudentDepartmentfrm;
+        private CustomMaterialDesign.RButton btnStudentCourseGradesfrm;
+        private CustomMaterialDesign.RButton btnCourseTopicfrm;
+        private CustomMaterialDesign.RButton btnQuestionAnswerExam;
+        private CustomMaterialDesign.RButton btnStudentQuestionAnswerExam;
+        private CustomMaterialDesign.RButton btnInstructorCoursefrm;
     }
 }

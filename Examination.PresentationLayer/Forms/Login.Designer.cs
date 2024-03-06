@@ -81,9 +81,9 @@
             // btn_Exit
             // 
             btn_Exit.Image = (Image)resources.GetObject("btn_Exit.Image");
-            btn_Exit.Location = new Point(273, 3);
+            btn_Exit.Location = new Point(273, 5);
             btn_Exit.Name = "btn_Exit";
-            btn_Exit.Size = new Size(35, 24);
+            btn_Exit.Size = new Size(35, 28);
             btn_Exit.SizeMode = PictureBoxSizeMode.Zoom;
             btn_Exit.TabIndex = 1;
             btn_Exit.TabStop = false;
@@ -117,8 +117,8 @@
             // 
             // btn_Login
             // 
-            btn_Login.BackColor = Color.DeepSkyBlue;
-            btn_Login.BackgroundColor = Color.DeepSkyBlue;
+            btn_Login.BackColor = Color.DarkTurquoise;
+            btn_Login.BackgroundColor = Color.DarkTurquoise;
             btn_Login.BorderColor = Color.White;
             btn_Login.BorderRadius = 20;
             btn_Login.BorderSize = 0;

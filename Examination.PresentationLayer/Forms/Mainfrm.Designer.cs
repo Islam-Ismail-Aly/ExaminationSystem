@@ -40,6 +40,7 @@
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Main Form";
+            WindowState = FormWindowState.Maximized;
             ResumeLayout(false);
         }
 

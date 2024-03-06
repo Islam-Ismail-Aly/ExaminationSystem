@@ -41,8 +41,11 @@
             // 
             // txtQuestionContent
             // 
-            txtQuestionContent.BackColor = Color.PaleTurquoise;
+            txtQuestionContent.BackColor = Color.MediumPurple;
+            txtQuestionContent.BorderStyle = BorderStyle.FixedSingle;
             txtQuestionContent.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            txtQuestionContent.ForeColor = Color.White;
+            txtQuestionContent.HideSelection = false;
             txtQuestionContent.Location = new Point(11, 13);
             txtQuestionContent.Multiline = true;
             txtQuestionContent.Name = "txtQuestionContent";

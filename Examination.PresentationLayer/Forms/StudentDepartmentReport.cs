@@ -1,5 +1,6 @@
 ﻿using Examination.BussinessLogicLayer.Services;
 using Examination.DataAccessLayer.Data;
+using Examination.PresentationLayer.Helpers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Reporting.WinForms;
 using System.Data.SqlClient;
@@ -59,6 +60,11 @@ namespace Examination.PresentationLayer.Forms
 
             // Refresh the report viewer
             reportViewerStudentDepartment.RefreshReport();
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            CustomHelperManager.ExitHelper();
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Studentfrm));
             ProfileTab = new TabPage();
             dataGridView1 = new DataGridView();
             textBox1 = new TextBox();
@@ -39,36 +40,61 @@
             button1 = new Button();
             tabControl2 = new TabControl();
             tabProfile = new TabPage();
+            groupBox1 = new GroupBox();
+            dataGridCourses = new DataGridView();
+            pictureBox7 = new PictureBox();
+            pictureBox6 = new PictureBox();
+            label5 = new Label();
+            dataGridCourseGrades = new DataGridView();
+            label11 = new Label();
+            pictureBox5 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            panel1 = new Panel();
+            label4 = new Label();
+            txtDateTime = new TextBox();
+            txtStudentName = new TextBox();
+            pictureBox1 = new PictureBox();
             txtBranch = new TextBox();
             txtDepartment = new TextBox();
             txtSupervisor = new TextBox();
             txtUsername = new TextBox();
-            txtStudentName = new TextBox();
-            dataGridCourseGrades = new DataGridView();
-            dataGridCourses = new DataGridView();
-            label11 = new Label();
             label9 = new Label();
-            label5 = new Label();
             label8 = new Label();
             label10 = new Label();
             label7 = new Label();
-            label4 = new Label();
             tabCreateExam = new TabPage();
-            btnSubmit = new Button();
-            btnGetQuestion = new Button();
+            pictureBox9 = new PictureBox();
+            pictureBox8 = new PictureBox();
+            btnSubmit = new CustomMaterialDesign.RButton();
+            btn_Login = new CustomMaterialDesign.RButton();
             panelQuestion = new Panel();
             flowLayoutPanel = new FlowLayoutPanel();
             comboCourse = new ComboBox();
             label6 = new Label();
+            btn_Exit = new PictureBox();
             ProfileTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             CreateExamTab.SuspendLayout();
             tabControl2.SuspendLayout();
             tabProfile.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridCourseGrades).BeginInit();
+            groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridCourses).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridCourseGrades).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabCreateExam.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             panelQuestion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btn_Exit).BeginInit();
             SuspendLayout();
             // 
             // ProfileTab
@@ -164,41 +190,219 @@
             tabControl2.Controls.Add(tabProfile);
             tabControl2.Controls.Add(tabCreateExam);
             tabControl2.Font = new Font("Segoe UI", 3.5F, FontStyle.Bold, GraphicsUnit.Millimeter);
-            tabControl2.Location = new Point(3, 2);
+            tabControl2.ItemSize = new Size(60, 40);
+            tabControl2.Location = new Point(3, 39);
             tabControl2.Name = "tabControl2";
             tabControl2.SelectedIndex = 0;
-            tabControl2.Size = new Size(798, 572);
+            tabControl2.Size = new Size(790, 600);
+            tabControl2.SizeMode = TabSizeMode.FillToRight;
             tabControl2.TabIndex = 0;
             // 
             // tabProfile
             // 
-            tabProfile.BackColor = Color.MintCream;
+            tabProfile.BackColor = Color.White;
+            tabProfile.Controls.Add(groupBox1);
+            tabProfile.Controls.Add(pictureBox5);
+            tabProfile.Controls.Add(pictureBox4);
+            tabProfile.Controls.Add(pictureBox3);
+            tabProfile.Controls.Add(pictureBox2);
+            tabProfile.Controls.Add(panel1);
+            tabProfile.Controls.Add(pictureBox1);
             tabProfile.Controls.Add(txtBranch);
             tabProfile.Controls.Add(txtDepartment);
             tabProfile.Controls.Add(txtSupervisor);
             tabProfile.Controls.Add(txtUsername);
-            tabProfile.Controls.Add(txtStudentName);
-            tabProfile.Controls.Add(dataGridCourseGrades);
-            tabProfile.Controls.Add(dataGridCourses);
-            tabProfile.Controls.Add(label11);
             tabProfile.Controls.Add(label9);
-            tabProfile.Controls.Add(label5);
             tabProfile.Controls.Add(label8);
             tabProfile.Controls.Add(label10);
             tabProfile.Controls.Add(label7);
-            tabProfile.Controls.Add(label4);
             tabProfile.ForeColor = SystemColors.ActiveCaptionText;
-            tabProfile.Location = new Point(4, 26);
+            tabProfile.Location = new Point(4, 44);
             tabProfile.Name = "tabProfile";
             tabProfile.Padding = new Padding(3);
-            tabProfile.Size = new Size(790, 542);
+            tabProfile.Size = new Size(782, 552);
             tabProfile.TabIndex = 0;
-            tabProfile.Text = "Profile";
+            tabProfile.Text = "   Profile    ";
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(dataGridCourses);
+            groupBox1.Controls.Add(pictureBox7);
+            groupBox1.Controls.Add(pictureBox6);
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(dataGridCourseGrades);
+            groupBox1.Controls.Add(label11);
+            groupBox1.Location = new Point(237, 206);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(471, 284);
+            groupBox1.TabIndex = 6;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "  Courses Info  ";
+            // 
+            // dataGridCourses
+            // 
+            dataGridCourses.BackgroundColor = Color.Azure;
+            dataGridCourses.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridCourses.GridColor = Color.White;
+            dataGridCourses.Location = new Point(180, 40);
+            dataGridCourses.Name = "dataGridCourses";
+            dataGridCourses.Size = new Size(146, 85);
+            dataGridCourses.TabIndex = 1;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(13, 159);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(28, 29);
+            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox7.TabIndex = 5;
+            pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(13, 36);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(28, 29);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 5;
+            pictureBox6.TabStop = false;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label5.Location = new Point(61, 40);
+            label5.Name = "label5";
+            label5.Size = new Size(61, 19);
+            label5.TabIndex = 0;
+            label5.Text = "Courses";
+            // 
+            // dataGridCourseGrades
+            // 
+            dataGridCourseGrades.BackgroundColor = Color.Azure;
+            dataGridCourseGrades.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridCourseGrades.GridColor = Color.White;
+            dataGridCourseGrades.Location = new Point(180, 164);
+            dataGridCourseGrades.Name = "dataGridCourseGrades";
+            dataGridCourseGrades.Size = new Size(250, 92);
+            dataGridCourseGrades.TabIndex = 1;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label11.Location = new Point(62, 164);
+            label11.Name = "label11";
+            label11.Size = new Size(112, 19);
+            label11.TabIndex = 0;
+            label11.Text = "Courses Grades";
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(237, 128);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(28, 29);
+            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox5.TabIndex = 5;
+            pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(237, 81);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(28, 25);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 5;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(30, 331);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(28, 25);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 5;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(30, 239);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(28, 25);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 5;
+            pictureBox2.TabStop = false;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.MediumPurple;
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(txtDateTime);
+            panel1.Controls.Add(txtStudentName);
+            panel1.Location = new Point(207, 6);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(577, 48);
+            panel1.TabIndex = 4;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(7, 9);
+            label4.Name = "label4";
+            label4.Size = new Size(99, 28);
+            label4.TabIndex = 0;
+            label4.Text = "Welcome";
+            // 
+            // txtDateTime
+            // 
+            txtDateTime.BackColor = Color.MediumPurple;
+            txtDateTime.BorderStyle = BorderStyle.None;
+            txtDateTime.Font = new Font("Segoe UI", 4F, FontStyle.Bold, GraphicsUnit.Millimeter);
+            txtDateTime.ForeColor = Color.White;
+            txtDateTime.HideSelection = false;
+            txtDateTime.Location = new Point(384, 14);
+            txtDateTime.Name = "txtDateTime";
+            txtDateTime.ReadOnly = true;
+            txtDateTime.Size = new Size(180, 21);
+            txtDateTime.TabIndex = 2;
+            // 
+            // txtStudentName
+            // 
+            txtStudentName.BackColor = Color.MediumPurple;
+            txtStudentName.BorderStyle = BorderStyle.None;
+            txtStudentName.Font = new Font("Segoe UI", 4F, FontStyle.Bold, GraphicsUnit.Millimeter);
+            txtStudentName.ForeColor = Color.White;
+            txtStudentName.HideSelection = false;
+            txtStudentName.Location = new Point(112, 15);
+            txtStudentName.Name = "txtStudentName";
+            txtStudentName.ReadOnly = true;
+            txtStudentName.Size = new Size(153, 21);
+            txtStudentName.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(6, 6);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(195, 192);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
             // 
             // txtBranch
             // 
-            txtBranch.BackColor = Color.PowderBlue;
-            txtBranch.Location = new Point(452, 17);
+            txtBranch.BackColor = Color.MediumPurple;
+            txtBranch.BorderStyle = BorderStyle.FixedSingle;
+            txtBranch.ForeColor = Color.White;
+            txtBranch.Location = new Point(382, 81);
             txtBranch.Name = "txtBranch";
             txtBranch.ReadOnly = true;
             txtBranch.Size = new Size(153, 25);
@@ -207,8 +411,10 @@
             // 
             // txtDepartment
             // 
-            txtDepartment.BackColor = Color.PowderBlue;
-            txtDepartment.Location = new Point(452, 70);
+            txtDepartment.BackColor = Color.MediumPurple;
+            txtDepartment.BorderStyle = BorderStyle.FixedSingle;
+            txtDepartment.ForeColor = Color.White;
+            txtDepartment.Location = new Point(382, 132);
             txtDepartment.Name = "txtDepartment";
             txtDepartment.ReadOnly = true;
             txtDepartment.Size = new Size(153, 25);
@@ -217,173 +423,149 @@
             // 
             // txtSupervisor
             // 
-            txtSupervisor.BackColor = Color.PowderBlue;
-            txtSupervisor.Location = new Point(103, 122);
+            txtSupervisor.BackColor = Color.MediumPurple;
+            txtSupervisor.BorderStyle = BorderStyle.FixedSingle;
+            txtSupervisor.ForeColor = Color.White;
+            txtSupervisor.Location = new Point(22, 367);
             txtSupervisor.Name = "txtSupervisor";
             txtSupervisor.ReadOnly = true;
-            txtSupervisor.Size = new Size(153, 25);
+            txtSupervisor.Size = new Size(166, 25);
             txtSupervisor.TabIndex = 2;
             txtSupervisor.TextAlign = HorizontalAlignment.Center;
             // 
             // txtUsername
             // 
-            txtUsername.BackColor = Color.PowderBlue;
-            txtUsername.Location = new Point(103, 70);
+            txtUsername.BackColor = Color.MediumPurple;
+            txtUsername.BorderStyle = BorderStyle.FixedSingle;
+            txtUsername.ForeColor = Color.White;
+            txtUsername.Location = new Point(22, 276);
             txtUsername.Name = "txtUsername";
             txtUsername.ReadOnly = true;
-            txtUsername.Size = new Size(153, 25);
+            txtUsername.Size = new Size(166, 25);
             txtUsername.TabIndex = 2;
             txtUsername.TextAlign = HorizontalAlignment.Center;
-            // 
-            // txtStudentName
-            // 
-            txtStudentName.BackColor = Color.PowderBlue;
-            txtStudentName.Location = new Point(103, 18);
-            txtStudentName.Name = "txtStudentName";
-            txtStudentName.ReadOnly = true;
-            txtStudentName.Size = new Size(153, 25);
-            txtStudentName.TabIndex = 2;
-            txtStudentName.TextAlign = HorizontalAlignment.Center;
-            // 
-            // dataGridCourseGrades
-            // 
-            dataGridCourseGrades.BackgroundColor = Color.PowderBlue;
-            dataGridCourseGrades.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridCourseGrades.GridColor = SystemColors.InactiveBorder;
-            dataGridCourseGrades.Location = new Point(452, 237);
-            dataGridCourseGrades.Name = "dataGridCourseGrades";
-            dataGridCourseGrades.Size = new Size(237, 107);
-            dataGridCourseGrades.TabIndex = 1;
-            // 
-            // dataGridCourses
-            // 
-            dataGridCourses.BackgroundColor = Color.PowderBlue;
-            dataGridCourses.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridCourses.GridColor = SystemColors.InactiveBorder;
-            dataGridCourses.Location = new Point(452, 128);
-            dataGridCourses.Name = "dataGridCourses";
-            dataGridCourses.Size = new Size(237, 85);
-            dataGridCourses.TabIndex = 1;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 10F);
-            label11.Location = new Point(334, 237);
-            label11.Name = "label11";
-            label11.Size = new Size(112, 19);
-            label11.TabIndex = 0;
-            label11.Text = "Courses Grades :";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 10F);
-            label9.Location = new Point(354, 17);
+            label9.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label9.Location = new Point(281, 84);
             label9.Name = "label9";
-            label9.Size = new Size(58, 19);
+            label9.Size = new Size(55, 19);
             label9.TabIndex = 0;
-            label9.Text = "Branch :";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 10F);
-            label5.Location = new Point(355, 128);
-            label5.Name = "label5";
-            label5.Size = new Size(65, 19);
-            label5.TabIndex = 0;
-            label5.Text = "Courses :";
+            label9.Text = "Branch";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 10F);
-            label8.Location = new Point(354, 70);
+            label8.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label8.Location = new Point(281, 134);
             label8.Name = "label8";
-            label8.Size = new Size(90, 19);
+            label8.Size = new Size(89, 19);
             label8.TabIndex = 0;
-            label8.Text = "Department :";
+            label8.Text = "Department";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 10F);
-            label10.Location = new Point(6, 125);
+            label10.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label10.Location = new Point(66, 335);
             label10.Name = "label10";
-            label10.Size = new Size(80, 19);
+            label10.Size = new Size(82, 19);
             label10.TabIndex = 0;
-            label10.Text = "Supervisor :";
+            label10.Text = "Supervisor";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 10F);
-            label7.Location = new Point(6, 73);
+            label7.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label7.Location = new Point(64, 243);
             label7.Name = "label7";
-            label7.Size = new Size(78, 19);
+            label7.Size = new Size(76, 19);
             label7.TabIndex = 0;
-            label7.Text = "Username :";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 10F);
-            label4.Location = new Point(6, 18);
-            label4.Name = "label4";
-            label4.Size = new Size(52, 19);
-            label4.TabIndex = 0;
-            label4.Text = "Name :";
+            label7.Text = "Username";
             // 
             // tabCreateExam
             // 
+            tabCreateExam.Controls.Add(pictureBox9);
+            tabCreateExam.Controls.Add(pictureBox8);
             tabCreateExam.Controls.Add(btnSubmit);
-            tabCreateExam.Controls.Add(btnGetQuestion);
+            tabCreateExam.Controls.Add(btn_Login);
             tabCreateExam.Controls.Add(panelQuestion);
             tabCreateExam.Controls.Add(comboCourse);
             tabCreateExam.Controls.Add(label6);
-            tabCreateExam.Location = new Point(4, 26);
+            tabCreateExam.Location = new Point(4, 44);
             tabCreateExam.Name = "tabCreateExam";
             tabCreateExam.Padding = new Padding(3);
-            tabCreateExam.Size = new Size(790, 542);
+            tabCreateExam.Size = new Size(782, 552);
             tabCreateExam.TabIndex = 1;
-            tabCreateExam.Text = "Create Exam";
+            tabCreateExam.Text = "   Create Exam   ";
             tabCreateExam.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
+            pictureBox9.Location = new Point(615, 0);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(109, 84);
+            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox9.TabIndex = 12;
+            pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(18, 27);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(28, 29);
+            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.TabIndex = 11;
+            pictureBox8.TabStop = false;
             // 
             // btnSubmit
             // 
-            btnSubmit.BackColor = Color.DodgerBlue;
+            btnSubmit.BackColor = Color.DarkTurquoise;
+            btnSubmit.BackgroundColor = Color.DarkTurquoise;
+            btnSubmit.BorderColor = Color.White;
+            btnSubmit.BorderRadius = 20;
+            btnSubmit.BorderSize = 0;
             btnSubmit.FlatAppearance.BorderSize = 0;
             btnSubmit.FlatStyle = FlatStyle.Flat;
-            btnSubmit.Font = new Font("Segoe UI", 10F);
+            btnSubmit.Font = new Font("Microsoft Sans Serif", 10.5F);
             btnSubmit.ForeColor = Color.White;
-            btnSubmit.Location = new Point(17, 485);
+            btnSubmit.Location = new Point(18, 506);
             btnSubmit.Name = "btnSubmit";
-            btnSubmit.Size = new Size(132, 40);
-            btnSubmit.TabIndex = 8;
+            btnSubmit.Size = new Size(142, 40);
+            btnSubmit.TabIndex = 10;
             btnSubmit.Text = "Submit Exam";
+            btnSubmit.TextColor = Color.White;
             btnSubmit.UseVisualStyleBackColor = false;
             btnSubmit.Click += btnSubmit_Click;
             // 
-            // btnGetQuestion
+            // btn_Login
             // 
-            btnGetQuestion.BackColor = Color.DarkTurquoise;
-            btnGetQuestion.FlatAppearance.BorderSize = 0;
-            btnGetQuestion.FlatStyle = FlatStyle.Flat;
-            btnGetQuestion.Font = new Font("Segoe UI", 10.5F);
-            btnGetQuestion.ForeColor = Color.White;
-            btnGetQuestion.Location = new Point(288, 17);
-            btnGetQuestion.Name = "btnGetQuestion";
-            btnGetQuestion.Size = new Size(118, 35);
-            btnGetQuestion.TabIndex = 4;
-            btnGetQuestion.Text = "Get Question";
-            btnGetQuestion.UseVisualStyleBackColor = false;
-            btnGetQuestion.Click += btnGetQuestion_Click;
+            btn_Login.BackColor = Color.DarkTurquoise;
+            btn_Login.BackgroundColor = Color.DarkTurquoise;
+            btn_Login.BorderColor = Color.White;
+            btn_Login.BorderRadius = 20;
+            btn_Login.BorderSize = 0;
+            btn_Login.FlatAppearance.BorderSize = 0;
+            btn_Login.FlatStyle = FlatStyle.Flat;
+            btn_Login.Font = new Font("Microsoft Sans Serif", 10.5F);
+            btn_Login.ForeColor = Color.White;
+            btn_Login.Location = new Point(334, 25);
+            btn_Login.Name = "btn_Login";
+            btn_Login.Size = new Size(159, 40);
+            btn_Login.TabIndex = 9;
+            btn_Login.Text = "Generate Question";
+            btn_Login.TextColor = Color.White;
+            btn_Login.UseVisualStyleBackColor = false;
+            btn_Login.Click += btnGetQuestion_Click;
             // 
             // panelQuestion
             // 
             panelQuestion.Controls.Add(flowLayoutPanel);
-            panelQuestion.Location = new Point(6, 62);
+            panelQuestion.Location = new Point(6, 87);
             panelQuestion.Name = "panelQuestion";
             panelQuestion.Size = new Size(759, 413);
             panelQuestion.TabIndex = 3;
@@ -401,7 +583,7 @@
             // comboCourse
             // 
             comboCourse.FormattingEnabled = true;
-            comboCourse.Location = new Point(111, 20);
+            comboCourse.Location = new Point(166, 31);
             comboCourse.Name = "comboCourse";
             comboCourse.Size = new Size(121, 25);
             comboCourse.TabIndex = 1;
@@ -410,21 +592,35 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 10F);
-            label6.Location = new Point(6, 24);
+            label6.Location = new Point(58, 34);
             label6.Name = "label6";
-            label6.Size = new Size(95, 19);
+            label6.Size = new Size(92, 19);
             label6.TabIndex = 0;
-            label6.Text = "Course Name:";
+            label6.Text = "Course Name";
+            // 
+            // btn_Exit
+            // 
+            btn_Exit.Image = (Image)resources.GetObject("btn_Exit.Image");
+            btn_Exit.Location = new Point(761, 5);
+            btn_Exit.Name = "btn_Exit";
+            btn_Exit.Size = new Size(35, 28);
+            btn_Exit.SizeMode = PictureBoxSizeMode.Zoom;
+            btn_Exit.TabIndex = 2;
+            btn_Exit.TabStop = false;
+            btn_Exit.Click += btn_Exit_Click;
             // 
             // Studentfrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
-            ClientSize = new Size(803, 579);
+            ClientSize = new Size(801, 647);
+            Controls.Add(btn_Exit);
             Controls.Add(tabControl2);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Studentfrm";
             ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Student";
             Load += Studentfrm_Load;
             ProfileTab.ResumeLayout(false);
@@ -435,11 +631,25 @@
             tabControl2.ResumeLayout(false);
             tabProfile.ResumeLayout(false);
             tabProfile.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridCourseGrades).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridCourses).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridCourseGrades).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tabCreateExam.ResumeLayout(false);
             tabCreateExam.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             panelQuestion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)btn_Exit).EndInit();
             ResumeLayout(false);
         }
 
@@ -475,9 +685,22 @@
         private Label label10;
         private Panel panelQuestion;
         private FlowLayoutPanel flowLayoutPanel;
-        private Button btnGetQuestion;
-        private Button btnSubmit;
         private DataGridView dataGridCourseGrades;
         private Label label11;
+        private PictureBox pictureBox1;
+        private Panel panel1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox5;
+        private GroupBox groupBox1;
+        private PictureBox pictureBox6;
+        private PictureBox pictureBox7;
+        private PictureBox btn_Exit;
+        private CustomMaterialDesign.RButton btn_Login;
+        private TextBox txtDateTime;
+        private CustomMaterialDesign.RButton btnSubmit;
+        private PictureBox pictureBox8;
+        private PictureBox pictureBox9;
     }
 }
