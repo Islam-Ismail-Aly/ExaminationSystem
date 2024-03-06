@@ -32,12 +32,21 @@ namespace Examination.PresentationLayer.Forms
         private void Studentfrm_Load(object sender, EventArgs e)
         {
             txtStudentName.Text = _student.Fname + " " + _student.Lname;
+
             txtUsername.Text = _student.UserName;
+
             txtDepartment.Text = _studentService.GetDepartment(_student.DeptId);
+
             txtBranch.Text = _studentService.GetBranch(_student.BranchId);
+
             txtSupervisor.Text = _studentService.GetSupervisor(_student.SuperId);
 
+
             var list = _studentService.GetCourses(_student.StudentId);
+
+            var listGrade = _studentService.GetCoursesGrade(_student.StudentId);
+
+            dataGridCourseGrades.DataSource = listGrade;
 
             comboCourse.DataSource = list;
             comboCourse.DisplayMember = "Name";
@@ -53,12 +62,15 @@ namespace Examination.PresentationLayer.Forms
             dataGridCourses.Columns["StudentCourses"].Visible = false;
             dataGridCourses.Columns["Topics"].Visible = false;
             dataGridCourses.Columns["InstructorCourses"].Visible = false;
+            btnSubmit.Visible = false;
         }
 
         private void btnGetQuestion_Click(object sender, EventArgs e)
         {
             if (comboCourse.SelectedValue != null)
             {
+                flowLayoutPanel.Controls.Clear();
+
                 listQuestion = _examService.GetExamQuestion(comboCourse.Text);
 
                 for (int i = 0; i < listMcq.Length; i++)
@@ -112,14 +124,14 @@ namespace Examination.PresentationLayer.Forms
                         listTF[i].RadioButtons.Add(listTF[i].radioT);
                         listTF[i].RadioButtons.Add(listTF[i].radioF);
                     }
-                } 
+                }
+                btnSubmit.Visible = true;
             }
             else
             {
                 MessageBox.Show("Please check course!","Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
-            btnSubmit.Visible = true;
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)

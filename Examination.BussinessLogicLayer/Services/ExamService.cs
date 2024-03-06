@@ -52,13 +52,32 @@ namespace Examination.BussinessLogicLayer.Services
         {
             foreach (var item in answers)
             {
-                _db.Database.ExecuteSql($"EXEC [ExamProcedure].[InsertStudent_Question_Exam] {item.QuestionId}, {StudentId}, {ExamId}, {item.Correction}");
+                _db.Database.ExecuteSql($"EXEC [ExamProcedure].[InsertStudent_Question_Exam] {item.QuestionId}, {StudentId}, {ExamId}, {item.AnswerId}");
             }
         }
 
         public void InsertStudentCourse(int CourseId, int StudentId, int Grade)
         {
             _db.Database.ExecuteSql($"EXEC [StudentProcedure].[InsertStudent_Course_Grade] {CourseId}, {StudentId}, {Grade}");
+        }
+
+        public List<ExamViewModel> GetExam()
+        {
+            return _db.Exams.Select(e => new ExamViewModel { ExamId = e.ExamId }).AsNoTracking().ToList();
+        }
+
+        public List<QuestionAnswersExamViewModel> GetQuestionAnswerExam(int ExamId)
+        {
+            var list = _db.Database.SqlQuery<QuestionAnswersExamViewModel>($"EXEC [ExamProcedure].[QuestionAnswersByExamIdRep] {ExamId} ")
+                                   .AsNoTracking().ToList();
+            return list;
+        }
+
+        public List<StudentQuestionAnswersViewModel> GetStudentQuestionAnswerExam(int ExamId, int StudentId)
+        {
+            var list = _db.Database.SqlQuery<StudentQuestionAnswersViewModel>($"EXEC [ExamProcedure].[StudentQuestionWithAnswerExam] {ExamId}, {StudentId} ")
+                                   .AsNoTracking().ToList();
+            return list;
         }
     }
 }

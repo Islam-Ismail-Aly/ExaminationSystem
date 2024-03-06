@@ -9,13 +9,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Reports\CourseTopicsReport.rdlc" />
     <None Remove="Reports\InstructorCourseReport.rdlc" />
+    <None Remove="Reports\QuestionsExamReport.rdlc" />
+    <None Remove="Reports\StudentCourseGradesReport.rdlc" />
     <None Remove="Reports\StudentDepartmentReport.rdlc" />
+    <None Remove="Reports\StudentQuestionAnswersReport.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Reports\CourseTopicsReport.rdlc" />
     <EmbeddedResource Include="Reports\InstructorCourseReport.rdlc" />
+    <EmbeddedResource Include="Reports\QuestionsExamReport.rdlc" />
+    <EmbeddedResource Include="Reports\StudentCourseGradesReport.rdlc" />
     <EmbeddedResource Include="Reports\StudentDepartmentReport.rdlc" />
+    <EmbeddedResource Include="Reports\StudentQuestionAnswersReport.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
@@ -36,6 +44,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="CourseTopicsRepDataSet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CourseTopicsRepDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Update="ExaminationSystemDataSet.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -51,6 +64,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="QuestionAnswersByExamIdRepDataSet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>QuestionAnswersByExamIdRepDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="StudentGradeCourseRepDataSet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>StudentGradeCourseRepDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="StudentQuestionWithAnswerExamDataSet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>StudentQuestionWithAnswerExamDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -61,6 +89,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="CourseTopicsRepDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CourseTopicsRepDataSet.Designer.cs</LastGenOutput>
+    </None>
     <None Update="ExaminationSystemDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ExaminationSystemDataSet.Designer.cs</LastGenOutput>
@@ -68,6 +100,18 @@
     <None Update="InstructorCourseNameRepDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>InstructorCourseNameRepDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="QuestionAnswersByExamIdRepDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuestionAnswersByExamIdRepDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="StudentGradeCourseRepDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentGradeCourseRepDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="StudentQuestionWithAnswerExamDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentQuestionWithAnswerExamDataSet.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
 

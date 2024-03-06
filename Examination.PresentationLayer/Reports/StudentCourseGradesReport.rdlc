@@ -6,18 +6,15 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.96875in</Width>
+              <Width>1.95486in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.96875in</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>1.96875in</Width>
+              <Width>1.95486in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.36458in</Height>
+              <Height>0.375in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -28,7 +25,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>First Name</Value>
+                              <Value>Course Name</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -44,6 +41,26 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
                         <BackgroundColor>AliceBlue</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -63,7 +80,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Last Name</Value>
+                              <Value>Grade</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -79,41 +96,26 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>AliceBlue</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox6">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>User Name</Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox6</rd:DefaultName>
-                      <Style>
-                        <Border>
+                        <TopBorder>
+                          <Color>Black</Color>
                           <Style>Solid</Style>
-                        </Border>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
                         <BackgroundColor>AliceBlue</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -127,30 +129,51 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.36458in</Height>
+              <Height>0.375in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Fname">
+                    <Textbox Name="Name">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Fname.Value</Value>
+                              <Value>=Fields!Name.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Fname</rd:DefaultName>
+                      <rd:DefaultName>Name</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <VerticalAlign>Middle</VerticalAlign>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -161,56 +184,47 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Lname">
+                    <Textbox Name="Precent">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Lname.Value</Value>
+                              <Value>=Fields!Precent.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Lname</rd:DefaultName>
+                      <rd:DefaultName>Precent</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="UserName">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!UserName.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>UserName</rd:DefaultName>
-                      <Style>
-                        <Border>
+                        <TopBorder>
+                          <Color>Black</Color>
                           <Style>Solid</Style>
-                        </Border>
-                        <VerticalAlign>Middle</VerticalAlign>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -227,7 +241,6 @@
           <TablixMembers>
             <TablixMember />
             <TablixMember />
-            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -241,18 +254,38 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.17584in</Top>
-        <Left>0.31125in</Left>
-        <Height>0.72916in</Height>
-        <Width>5.90625in</Width>
+        <Top>0.26042in</Top>
+        <Left>1.05729in</Left>
+        <Height>0.75in</Height>
+        <Width>3.90972in</Width>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Style>Solid</Style>
           </Border>
+          <TopBorder>
+            <Color>Black</Color>
+            <Style>Solid</Style>
+            <Width>1pt</Width>
+          </TopBorder>
+          <BottomBorder>
+            <Color>Black</Color>
+            <Style>Solid</Style>
+            <Width>1pt</Width>
+          </BottomBorder>
+          <LeftBorder>
+            <Color>Black</Color>
+            <Style>Solid</Style>
+            <Width>1pt</Width>
+          </LeftBorder>
+          <RightBorder>
+            <Color>Black</Color>
+            <Style>Solid</Style>
+            <Width>1pt</Width>
+          </RightBorder>
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.71875in</Height>
+    <Height>2in</Height>
     <Style>
       <Border>
         <Style>Solid</Style>
@@ -262,20 +295,10 @@
   <Width>6.5in</Width>
   <Page>
     <PageHeader>
-      <Height>0.9675in</Height>
+      <Height>1in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Line Name="Line1">
-          <Top>0.67583in</Top>
-          <Height>0in</Height>
-          <Width>6.5in</Width>
-          <Style>
-            <Border>
-              <Style>Solid</Style>
-            </Border>
-          </Style>
-        </Line>
         <Textbox Name="Textbox1">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -283,7 +306,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Student Department Report</Value>
+                  <Value>Student Course Grades Report</Value>
                   <Style>
                     <FontSize>20pt</FontSize>
                     <Color>White</Color>
@@ -296,11 +319,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.125in</Top>
+          <Top>0.29688in</Top>
           <Left>0.14062in</Left>
           <Height>0.40625in</Height>
           <Width>6.21875in</Width>
-          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>Solid</Style>
@@ -332,6 +354,17 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Line Name="Line1">
+          <Top>0.875in</Top>
+          <Height>0in</Height>
+          <Width>6.5in</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
       </ReportItems>
       <Style>
         <Border>
@@ -340,7 +373,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1.64583in</Height>
+      <Height>1in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <Style>
@@ -357,64 +390,40 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ExaminationSystemDataSet">
+    <DataSource Name="StudentGradeCourseRepDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>23689ec8-4f0b-4692-b733-01251ed3930f</rd:DataSourceID>
+      <rd:DataSourceID>c6033343-1d82-4b9f-9fe7-809a9830d682</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DataSet1">
       <Query>
-        <DataSourceName>ExaminationSystemDataSet</DataSourceName>
+        <DataSourceName>StudentGradeCourseRepDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="StudentId">
-          <DataField>StudentId</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Fname">
-          <DataField>Fname</DataField>
+        <Field Name="Name">
+          <DataField>Name</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Lname">
-          <DataField>Lname</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="UserName">
-          <DataField>UserName</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Password">
-          <DataField>Password</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DeptId">
-          <DataField>DeptId</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="SuperId">
-          <DataField>SuperId</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BranchId">
-          <DataField>BranchId</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="Precent">
+          <DataField>Precent</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ExaminationSystemDataSet</rd:DataSetName>
-        <rd:SchemaPath>H:\ITI - Intake44\Introduction to C#\Labs_Projects\ExaminationSystem\Examination.PresentationLayer\ExaminationSystemDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>DepartmentStudentByIdRep</rd:TableName>
+        <rd:DataSetName>StudentGradeCourseRepDataSet</rd:DataSetName>
+        <rd:SchemaPath>H:\ITI - Intake44\Introduction to C#\Labs_Projects\ExaminationSystem\Examination.PresentationLayer\StudentGradeCourseRepDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>StudentGradeCourseRep</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>DepartmentStudentByIdRepTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>StudentGradeCourseRepTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>d3498ece-69a4-416f-a574-728093bf5773</rd:ReportID>
+  <rd:ReportID>ce093c79-46e9-4738-a2d7-0c9a4a827172</rd:ReportID>
 </Report>

@@ -17,7 +17,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.29688in</Height>
+              <Height>0.375in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -64,7 +64,7 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </RightBorder>
-                        <BackgroundColor>Gainsboro</BackgroundColor>
+                        <BackgroundColor>AliceBlue</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -119,7 +119,7 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </RightBorder>
-                        <BackgroundColor>Gainsboro</BackgroundColor>
+                        <BackgroundColor>AliceBlue</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -174,7 +174,7 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </RightBorder>
-                        <BackgroundColor>Gainsboro</BackgroundColor>
+                        <BackgroundColor>AliceBlue</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -187,7 +187,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.29688in</Height>
+              <Height>0.375in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -364,9 +364,9 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.13417in</Top>
-        <Left>0.32167in</Left>
-        <Height>0.59375in</Height>
+        <Top>0.24653in</Top>
+        <Left>0.21626in</Left>
+        <Height>0.75in</Height>
         <Width>5.86458in</Width>
         <Style>
           <Border>
@@ -395,8 +395,12 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.64583in</Height>
-    <Style />
+    <Height>3.90973in</Height>
+    <Style>
+      <Border>
+        <Style>Solid</Style>
+      </Border>
+    </Style>
   </Body>
   <Width>6.5in</Width>
   <Page>
@@ -415,6 +419,7 @@
                   <Value>Instructor Courses Report</Value>
                   <Style>
                     <FontSize>20pt</FontSize>
+                    <Color>White</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -452,6 +457,7 @@
               <Style>Solid</Style>
               <Width>1pt</Width>
             </RightBorder>
+            <BackgroundColor>#62dcff</BackgroundColor>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
             <PaddingTop>2pt</PaddingTop>
@@ -472,7 +478,7 @@
       </ReportItems>
       <Style>
         <Border>
-          <Style>None</Style>
+          <Style>Solid</Style>
         </Border>
       </Style>
     </PageHeader>

@@ -44,7 +44,9 @@
             txtSupervisor = new TextBox();
             txtUsername = new TextBox();
             txtStudentName = new TextBox();
+            dataGridCourseGrades = new DataGridView();
             dataGridCourses = new DataGridView();
+            label11 = new Label();
             label9 = new Label();
             label5 = new Label();
             label8 = new Label();
@@ -52,17 +54,18 @@
             label7 = new Label();
             label4 = new Label();
             tabCreateExam = new TabPage();
+            btnSubmit = new Button();
             btnGetQuestion = new Button();
             panelQuestion = new Panel();
             flowLayoutPanel = new FlowLayoutPanel();
             comboCourse = new ComboBox();
             label6 = new Label();
-            btnSubmit = new Button();
             ProfileTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             CreateExamTab.SuspendLayout();
             tabControl2.SuspendLayout();
             tabProfile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridCourseGrades).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridCourses).BeginInit();
             tabCreateExam.SuspendLayout();
             panelQuestion.SuspendLayout();
@@ -160,33 +163,37 @@
             // 
             tabControl2.Controls.Add(tabProfile);
             tabControl2.Controls.Add(tabCreateExam);
-            tabControl2.Location = new Point(12, 12);
+            tabControl2.Font = new Font("Segoe UI", 3.5F, FontStyle.Bold, GraphicsUnit.Millimeter);
+            tabControl2.Location = new Point(3, 2);
             tabControl2.Name = "tabControl2";
             tabControl2.SelectedIndex = 0;
-            tabControl2.Size = new Size(779, 562);
+            tabControl2.Size = new Size(798, 572);
             tabControl2.TabIndex = 0;
             // 
             // tabProfile
             // 
+            tabProfile.BackColor = Color.MintCream;
             tabProfile.Controls.Add(txtBranch);
             tabProfile.Controls.Add(txtDepartment);
             tabProfile.Controls.Add(txtSupervisor);
             tabProfile.Controls.Add(txtUsername);
             tabProfile.Controls.Add(txtStudentName);
+            tabProfile.Controls.Add(dataGridCourseGrades);
             tabProfile.Controls.Add(dataGridCourses);
+            tabProfile.Controls.Add(label11);
             tabProfile.Controls.Add(label9);
             tabProfile.Controls.Add(label5);
             tabProfile.Controls.Add(label8);
             tabProfile.Controls.Add(label10);
             tabProfile.Controls.Add(label7);
             tabProfile.Controls.Add(label4);
-            tabProfile.Location = new Point(4, 24);
+            tabProfile.ForeColor = SystemColors.ActiveCaptionText;
+            tabProfile.Location = new Point(4, 26);
             tabProfile.Name = "tabProfile";
             tabProfile.Padding = new Padding(3);
-            tabProfile.Size = new Size(771, 481);
+            tabProfile.Size = new Size(790, 542);
             tabProfile.TabIndex = 0;
             tabProfile.Text = "Profile";
-            tabProfile.UseVisualStyleBackColor = true;
             // 
             // txtBranch
             // 
@@ -194,37 +201,37 @@
             txtBranch.Location = new Point(452, 17);
             txtBranch.Name = "txtBranch";
             txtBranch.ReadOnly = true;
-            txtBranch.Size = new Size(153, 23);
+            txtBranch.Size = new Size(153, 25);
             txtBranch.TabIndex = 2;
             txtBranch.TextAlign = HorizontalAlignment.Center;
             // 
             // txtDepartment
             // 
             txtDepartment.BackColor = Color.PowderBlue;
-            txtDepartment.Location = new Point(452, 59);
+            txtDepartment.Location = new Point(452, 70);
             txtDepartment.Name = "txtDepartment";
             txtDepartment.ReadOnly = true;
-            txtDepartment.Size = new Size(153, 23);
+            txtDepartment.Size = new Size(153, 25);
             txtDepartment.TabIndex = 2;
             txtDepartment.TextAlign = HorizontalAlignment.Center;
             // 
             // txtSupervisor
             // 
             txtSupervisor.BackColor = Color.PowderBlue;
-            txtSupervisor.Location = new Point(103, 102);
+            txtSupervisor.Location = new Point(103, 122);
             txtSupervisor.Name = "txtSupervisor";
             txtSupervisor.ReadOnly = true;
-            txtSupervisor.Size = new Size(153, 23);
+            txtSupervisor.Size = new Size(153, 25);
             txtSupervisor.TabIndex = 2;
             txtSupervisor.TextAlign = HorizontalAlignment.Center;
             // 
             // txtUsername
             // 
             txtUsername.BackColor = Color.PowderBlue;
-            txtUsername.Location = new Point(103, 60);
+            txtUsername.Location = new Point(103, 70);
             txtUsername.Name = "txtUsername";
             txtUsername.ReadOnly = true;
-            txtUsername.Size = new Size(153, 23);
+            txtUsername.Size = new Size(153, 25);
             txtUsername.TabIndex = 2;
             txtUsername.TextAlign = HorizontalAlignment.Center;
             // 
@@ -234,18 +241,39 @@
             txtStudentName.Location = new Point(103, 18);
             txtStudentName.Name = "txtStudentName";
             txtStudentName.ReadOnly = true;
-            txtStudentName.Size = new Size(153, 23);
+            txtStudentName.Size = new Size(153, 25);
             txtStudentName.TabIndex = 2;
             txtStudentName.TextAlign = HorizontalAlignment.Center;
+            // 
+            // dataGridCourseGrades
+            // 
+            dataGridCourseGrades.BackgroundColor = Color.PowderBlue;
+            dataGridCourseGrades.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridCourseGrades.GridColor = SystemColors.InactiveBorder;
+            dataGridCourseGrades.Location = new Point(452, 237);
+            dataGridCourseGrades.Name = "dataGridCourseGrades";
+            dataGridCourseGrades.Size = new Size(237, 107);
+            dataGridCourseGrades.TabIndex = 1;
             // 
             // dataGridCourses
             // 
             dataGridCourses.BackgroundColor = Color.PowderBlue;
             dataGridCourses.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridCourses.Location = new Point(452, 106);
+            dataGridCourses.GridColor = SystemColors.InactiveBorder;
+            dataGridCourses.Location = new Point(452, 128);
             dataGridCourses.Name = "dataGridCourses";
-            dataGridCourses.Size = new Size(153, 82);
+            dataGridCourses.Size = new Size(237, 85);
             dataGridCourses.TabIndex = 1;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 10F);
+            label11.Location = new Point(334, 237);
+            label11.Name = "label11";
+            label11.Size = new Size(112, 19);
+            label11.TabIndex = 0;
+            label11.Text = "Courses Grades :";
             // 
             // label9
             // 
@@ -261,7 +289,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 10F);
-            label5.Location = new Point(355, 106);
+            label5.Location = new Point(355, 128);
             label5.Name = "label5";
             label5.Size = new Size(65, 19);
             label5.TabIndex = 0;
@@ -271,7 +299,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 10F);
-            label8.Location = new Point(354, 59);
+            label8.Location = new Point(354, 70);
             label8.Name = "label8";
             label8.Size = new Size(90, 19);
             label8.TabIndex = 0;
@@ -281,7 +309,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 10F);
-            label10.Location = new Point(6, 105);
+            label10.Location = new Point(6, 125);
             label10.Name = "label10";
             label10.Size = new Size(80, 19);
             label10.TabIndex = 0;
@@ -291,7 +319,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 10F);
-            label7.Location = new Point(6, 63);
+            label7.Location = new Point(6, 73);
             label7.Name = "label7";
             label7.Size = new Size(78, 19);
             label7.TabIndex = 0;
@@ -314,23 +342,42 @@
             tabCreateExam.Controls.Add(panelQuestion);
             tabCreateExam.Controls.Add(comboCourse);
             tabCreateExam.Controls.Add(label6);
-            tabCreateExam.Location = new Point(4, 24);
+            tabCreateExam.Location = new Point(4, 26);
             tabCreateExam.Name = "tabCreateExam";
             tabCreateExam.Padding = new Padding(3);
-            tabCreateExam.Size = new Size(771, 534);
+            tabCreateExam.Size = new Size(790, 542);
             tabCreateExam.TabIndex = 1;
             tabCreateExam.Text = "Create Exam";
             tabCreateExam.UseVisualStyleBackColor = true;
             // 
+            // btnSubmit
+            // 
+            btnSubmit.BackColor = Color.DodgerBlue;
+            btnSubmit.FlatAppearance.BorderSize = 0;
+            btnSubmit.FlatStyle = FlatStyle.Flat;
+            btnSubmit.Font = new Font("Segoe UI", 10F);
+            btnSubmit.ForeColor = Color.White;
+            btnSubmit.Location = new Point(17, 485);
+            btnSubmit.Name = "btnSubmit";
+            btnSubmit.Size = new Size(132, 40);
+            btnSubmit.TabIndex = 8;
+            btnSubmit.Text = "Submit Exam";
+            btnSubmit.UseVisualStyleBackColor = false;
+            btnSubmit.Click += btnSubmit_Click;
+            // 
             // btnGetQuestion
             // 
-            btnGetQuestion.Font = new Font("Segoe UI", 10F);
-            btnGetQuestion.Location = new Point(272, 14);
+            btnGetQuestion.BackColor = Color.DarkTurquoise;
+            btnGetQuestion.FlatAppearance.BorderSize = 0;
+            btnGetQuestion.FlatStyle = FlatStyle.Flat;
+            btnGetQuestion.Font = new Font("Segoe UI", 10.5F);
+            btnGetQuestion.ForeColor = Color.White;
+            btnGetQuestion.Location = new Point(288, 17);
             btnGetQuestion.Name = "btnGetQuestion";
             btnGetQuestion.Size = new Size(118, 35);
             btnGetQuestion.TabIndex = 4;
             btnGetQuestion.Text = "Get Question";
-            btnGetQuestion.UseVisualStyleBackColor = true;
+            btnGetQuestion.UseVisualStyleBackColor = false;
             btnGetQuestion.Click += btnGetQuestion_Click;
             // 
             // panelQuestion
@@ -344,6 +391,7 @@
             // flowLayoutPanel
             // 
             flowLayoutPanel.AutoScroll = true;
+            flowLayoutPanel.BackColor = Color.AliceBlue;
             flowLayoutPanel.Dock = DockStyle.Fill;
             flowLayoutPanel.Location = new Point(0, 0);
             flowLayoutPanel.Name = "flowLayoutPanel";
@@ -353,34 +401,20 @@
             // comboCourse
             // 
             comboCourse.FormattingEnabled = true;
-            comboCourse.Location = new Point(95, 21);
+            comboCourse.Location = new Point(111, 20);
             comboCourse.Name = "comboCourse";
-            comboCourse.Size = new Size(121, 23);
+            comboCourse.Size = new Size(121, 25);
             comboCourse.TabIndex = 1;
             // 
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 10F);
             label6.Location = new Point(6, 24);
             label6.Name = "label6";
-            label6.Size = new Size(82, 15);
+            label6.Size = new Size(95, 19);
             label6.TabIndex = 0;
             label6.Text = "Course Name:";
-            // 
-            // btnSubmit
-            // 
-            btnSubmit.BackColor = Color.DodgerBlue;
-            btnSubmit.FlatAppearance.BorderSize = 0;
-            btnSubmit.FlatStyle = FlatStyle.Flat;
-            btnSubmit.Font = new Font("Segoe UI", 10F);
-            btnSubmit.ForeColor = Color.White;
-            btnSubmit.Location = new Point(17, 488);
-            btnSubmit.Name = "btnSubmit";
-            btnSubmit.Size = new Size(109, 40);
-            btnSubmit.TabIndex = 8;
-            btnSubmit.Text = "Submit";
-            btnSubmit.UseVisualStyleBackColor = false;
-            btnSubmit.Click += btnSubmit_Click;
             // 
             // Studentfrm
             // 
@@ -401,6 +435,7 @@
             tabControl2.ResumeLayout(false);
             tabProfile.ResumeLayout(false);
             tabProfile.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridCourseGrades).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridCourses).EndInit();
             tabCreateExam.ResumeLayout(false);
             tabCreateExam.PerformLayout();
@@ -442,5 +477,7 @@
         private FlowLayoutPanel flowLayoutPanel;
         private Button btnGetQuestion;
         private Button btnSubmit;
+        private DataGridView dataGridCourseGrades;
+        private Label label11;
     }
 }

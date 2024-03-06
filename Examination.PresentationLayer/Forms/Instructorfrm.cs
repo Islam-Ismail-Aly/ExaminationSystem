@@ -1,6 +1,7 @@
 ﻿using Examination.BussinessLogicLayer.Services;
 using Examination.DataAccessLayer.Data;
 using Examination.PresentationLayer.Helpers;
+using Examination.PresentationLayer.Reports;
 using Microsoft.IdentityModel.Tokens;
 
 namespace Examination.PresentationLayer.Forms
@@ -156,6 +157,30 @@ namespace Examination.PresentationLayer.Forms
         private void btnInstructorCoursefrm_Click(object sender, EventArgs e)
         {
             InstructorCourseReport reportfrm = new InstructorCourseReport();
+            reportfrm.ShowDialog();
+        }
+
+        private void btnStudentCourseGradesfrm_Click(object sender, EventArgs e)
+        {
+            StudentCourseGradeReport reportfrms = new StudentCourseGradeReport();
+            reportfrms.ShowDialog();
+        }
+
+        private void btnCourseTopicfrm_Click(object sender, EventArgs e)
+        {
+            CourseTopicsReport reportfrm = new CourseTopicsReport();
+            reportfrm.ShowDialog();
+        }
+
+        private void btnQuestionAnswerExam_Click(object sender, EventArgs e)
+        {
+            QuestionAnswersExamReport reportfrm = new QuestionAnswersExamReport();
+            reportfrm.ShowDialog();
+        }
+
+        private void btnStudentQuestionAnswerExam_Click(object sender, EventArgs e)
+        {
+            StudentQuestionAnswersReport reportfrm = new StudentQuestionAnswersReport();
             reportfrm.ShowDialog();
         }
     }

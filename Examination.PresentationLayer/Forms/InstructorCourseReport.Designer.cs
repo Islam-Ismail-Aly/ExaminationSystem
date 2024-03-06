@@ -80,7 +80,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MintCream;
-            ClientSize = new Size(700, 551);
+            ClientSize = new Size(763, 569);
             Controls.Add(reportInstructorCourse);
             Controls.Add(btnInstructorCourse);
             Controls.Add(comboInstructor);

@@ -1,5 +1,6 @@
 ﻿
 
+using Examination.BussinessLogicLayer.ViewModels;
 using Examination.DataAccessLayer.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -37,6 +38,20 @@ namespace Examination.BussinessLogicLayer.Services
         public string GetSupervisor(int? SupervisorId)
         {
             return _db.Students.Where(s => s.StudentId == SupervisorId).Select(s => s.Fname + " " + s.Lname).FirstOrDefault().ToString();
+        }
+
+        public List<Student> GetStudents()
+        {
+            return _db.Students.AsNoTracking().ToList();
+        }
+
+        public List<StudentCourseGradeViewModel> GetCoursesGrade(int StudentId)
+        {
+            var list = _db.Database.SqlQuery<StudentCourseGradeViewModel>($"EXEC [StudentProcedure].[StudentGradeCourseRep] {StudentId}")
+                                      .AsNoTracking()
+                                      .ToList();
+
+            return (List<StudentCourseGradeViewModel>)list;
         }
     }
 }
