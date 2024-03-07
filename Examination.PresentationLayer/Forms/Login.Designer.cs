@@ -41,19 +41,21 @@
             txt_Password = new TextBox();
             radioStudent = new RadioButton();
             radioInstructor = new RadioButton();
+            btn_Minimize = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btn_Exit).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btn_Minimize).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(57, 26);
+            pictureBox1.Location = new Point(61, 32);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(192, 219);
+            pictureBox1.Size = new Size(182, 214);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -81,7 +83,7 @@
             // btn_Exit
             // 
             btn_Exit.Image = (Image)resources.GetObject("btn_Exit.Image");
-            btn_Exit.Location = new Point(273, 5);
+            btn_Exit.Location = new Point(273, 4);
             btn_Exit.Name = "btn_Exit";
             btn_Exit.Size = new Size(35, 28);
             btn_Exit.SizeMode = PictureBoxSizeMode.Zoom;
@@ -91,7 +93,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DeepSkyBlue;
+            panel1.BackColor = Color.DarkTurquoise;
             panel1.Location = new Point(75, 312);
             panel1.Name = "panel1";
             panel1.Size = new Size(190, 1);
@@ -99,7 +101,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.DeepSkyBlue;
+            panel2.BackColor = Color.DarkTurquoise;
             panel2.Location = new Point(75, 387);
             panel2.Name = "panel2";
             panel2.Size = new Size(190, 1);
@@ -124,7 +126,7 @@
             btn_Login.BorderSize = 0;
             btn_Login.FlatAppearance.BorderSize = 0;
             btn_Login.FlatStyle = FlatStyle.Flat;
-            btn_Login.Font = new Font("Microsoft Sans Serif", 10.5F);
+            btn_Login.Font = new Font("Gabriola", 14F);
             btn_Login.ForeColor = Color.White;
             btn_Login.Location = new Point(85, 448);
             btn_Login.Name = "btn_Login";
@@ -160,10 +162,10 @@
             // 
             radioStudent.AutoSize = true;
             radioStudent.BackColor = Color.White;
-            radioStudent.Font = new Font("Segoe UI", 8F);
-            radioStudent.Location = new Point(57, 412);
+            radioStudent.Font = new Font("Gabriola", 12F);
+            radioStudent.Location = new Point(57, 406);
             radioStudent.Name = "radioStudent";
-            radioStudent.Size = new Size(66, 17);
+            radioStudent.Size = new Size(71, 33);
             radioStudent.TabIndex = 7;
             radioStudent.TabStop = true;
             radioStudent.Text = "Student";
@@ -173,14 +175,25 @@
             // 
             radioInstructor.AutoSize = true;
             radioInstructor.BackColor = Color.White;
-            radioInstructor.Font = new Font("Segoe UI", 8F);
-            radioInstructor.Location = new Point(174, 412);
+            radioInstructor.Font = new Font("Gabriola", 12F);
+            radioInstructor.Location = new Point(174, 406);
             radioInstructor.Name = "radioInstructor";
-            radioInstructor.Size = new Size(75, 17);
+            radioInstructor.Size = new Size(82, 33);
             radioInstructor.TabIndex = 7;
             radioInstructor.TabStop = true;
             radioInstructor.Text = "Instructor";
             radioInstructor.UseVisualStyleBackColor = false;
+            // 
+            // btn_Minimize
+            // 
+            btn_Minimize.Image = (Image)resources.GetObject("btn_Minimize.Image");
+            btn_Minimize.Location = new Point(242, 6);
+            btn_Minimize.Name = "btn_Minimize";
+            btn_Minimize.Size = new Size(30, 24);
+            btn_Minimize.SizeMode = PictureBoxSizeMode.Zoom;
+            btn_Minimize.TabIndex = 8;
+            btn_Minimize.TabStop = false;
+            btn_Minimize.Click += btn_Minimize_Click;
             // 
             // Login
             // 
@@ -189,6 +202,7 @@
             BackColor = Color.White;
             ClientSize = new Size(308, 547);
             ControlBox = false;
+            Controls.Add(btn_Minimize);
             Controls.Add(radioInstructor);
             Controls.Add(radioStudent);
             Controls.Add(pictureBox4);
@@ -212,6 +226,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)btn_Exit).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btn_Minimize).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -230,5 +245,6 @@
         private TextBox txt_Password;
         private RadioButton radioStudent;
         private RadioButton radioInstructor;
+        private PictureBox btn_Minimize;
     }
 }

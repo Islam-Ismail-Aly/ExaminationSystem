@@ -35,27 +35,30 @@
             btn_Exit = new PictureBox();
             btnStudentDepartment = new CustomMaterialDesign.RButton();
             pictureBox6 = new PictureBox();
+            btn_Minimize = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)btn_Exit).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btn_Minimize).BeginInit();
             SuspendLayout();
             // 
             // comboStudnet
             // 
+            comboStudnet.Font = new Font("Gabriola", 12F);
             comboStudnet.FormattingEnabled = true;
-            comboStudnet.Location = new Point(135, 22);
+            comboStudnet.Location = new Point(134, 16);
             comboStudnet.Name = "comboStudnet";
-            comboStudnet.Size = new Size(145, 23);
+            comboStudnet.Size = new Size(145, 37);
             comboStudnet.TabIndex = 9;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10F);
-            label1.Location = new Point(65, 22);
+            label1.Font = new Font("Gabriola", 15F);
+            label1.Location = new Point(53, 16);
             label1.Name = "label1";
-            label1.Size = new Size(64, 19);
+            label1.Size = new Size(65, 37);
             label1.TabIndex = 8;
-            label1.Text = "Student :";
+            label1.Text = "Student";
             // 
             // reportStudentCourseGrades
             // 
@@ -85,11 +88,11 @@
             btnStudentDepartment.BorderSize = 0;
             btnStudentDepartment.FlatAppearance.BorderSize = 0;
             btnStudentDepartment.FlatStyle = FlatStyle.Flat;
-            btnStudentDepartment.Font = new Font("Microsoft Sans Serif", 10.5F);
+            btnStudentDepartment.Font = new Font("Gabriola", 14F);
             btnStudentDepartment.ForeColor = Color.White;
-            btnStudentDepartment.Location = new Point(366, 12);
+            btnStudentDepartment.Location = new Point(365, 12);
             btnStudentDepartment.Name = "btnStudentDepartment";
-            btnStudentDepartment.Size = new Size(142, 40);
+            btnStudentDepartment.Size = new Size(141, 40);
             btnStudentDepartment.TabIndex = 18;
             btnStudentDepartment.Text = "Get Data";
             btnStudentDepartment.TextColor = Color.White;
@@ -99,19 +102,31 @@
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(16, 17);
+            pictureBox6.Location = new Point(15, 17);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(28, 29);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 19;
             pictureBox6.TabStop = false;
             // 
+            // btn_Minimize
+            // 
+            btn_Minimize.Image = (Image)resources.GetObject("btn_Minimize.Image");
+            btn_Minimize.Location = new Point(697, 3);
+            btn_Minimize.Name = "btn_Minimize";
+            btn_Minimize.Size = new Size(29, 24);
+            btn_Minimize.SizeMode = PictureBoxSizeMode.Zoom;
+            btn_Minimize.TabIndex = 20;
+            btn_Minimize.TabStop = false;
+            btn_Minimize.Click += btn_Minimize_Click;
+            // 
             // StudentCourseGradeReport
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
-            ClientSize = new Size(763, 569);
+            ClientSize = new Size(763, 537);
+            Controls.Add(btn_Minimize);
             Controls.Add(pictureBox6);
             Controls.Add(btnStudentDepartment);
             Controls.Add(btn_Exit);
@@ -126,6 +141,7 @@
             Load += StudentCourseGradeReport_Load;
             ((System.ComponentModel.ISupportInitialize)btn_Exit).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btn_Minimize).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -137,5 +153,6 @@
         private PictureBox btn_Exit;
         private CustomMaterialDesign.RButton btnStudentDepartment;
         private PictureBox pictureBox6;
+        private PictureBox btn_Minimize;
     }
 }

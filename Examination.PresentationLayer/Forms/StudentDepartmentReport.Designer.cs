@@ -35,26 +35,29 @@
             btn_Exit = new PictureBox();
             btnStudentDepartment = new CustomMaterialDesign.RButton();
             pictureBox6 = new PictureBox();
+            btn_Minimize = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)btn_Exit).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btn_Minimize).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10F);
-            label1.Location = new Point(60, 25);
+            label1.Font = new Font("Gabriola", 15F);
+            label1.Location = new Point(55, 18);
             label1.Name = "label1";
-            label1.Size = new Size(83, 19);
+            label1.Size = new Size(92, 37);
             label1.TabIndex = 0;
             label1.Text = "Department";
             // 
             // comboDepartment
             // 
+            comboDepartment.Font = new Font("Gabriola", 12F);
             comboDepartment.FormattingEnabled = true;
-            comboDepartment.Location = new Point(173, 24);
+            comboDepartment.Location = new Point(173, 20);
             comboDepartment.Name = "comboDepartment";
-            comboDepartment.Size = new Size(141, 23);
+            comboDepartment.Size = new Size(141, 37);
             comboDepartment.TabIndex = 1;
             // 
             // reportViewerStudentDepartment
@@ -86,7 +89,7 @@
             btnStudentDepartment.BorderSize = 0;
             btnStudentDepartment.FlatAppearance.BorderSize = 0;
             btnStudentDepartment.FlatStyle = FlatStyle.Flat;
-            btnStudentDepartment.Font = new Font("Microsoft Sans Serif", 10.5F);
+            btnStudentDepartment.Font = new Font("Gabriola", 14F);
             btnStudentDepartment.ForeColor = Color.White;
             btnStudentDepartment.Location = new Point(427, 13);
             btnStudentDepartment.Name = "btnStudentDepartment";
@@ -107,12 +110,24 @@
             pictureBox6.TabIndex = 19;
             pictureBox6.TabStop = false;
             // 
+            // btn_Minimize
+            // 
+            btn_Minimize.Image = (Image)resources.GetObject("btn_Minimize.Image");
+            btn_Minimize.Location = new Point(697, 3);
+            btn_Minimize.Name = "btn_Minimize";
+            btn_Minimize.Size = new Size(30, 24);
+            btn_Minimize.SizeMode = PictureBoxSizeMode.Zoom;
+            btn_Minimize.TabIndex = 21;
+            btn_Minimize.TabStop = false;
+            btn_Minimize.Click += btn_Minimize_Click;
+            // 
             // StudentDepartmentReport
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(763, 569);
+            Controls.Add(btn_Minimize);
             Controls.Add(pictureBox6);
             Controls.Add(btnStudentDepartment);
             Controls.Add(btn_Exit);
@@ -127,6 +142,7 @@
             Load += StudentDepartmentReport_Load;
             ((System.ComponentModel.ISupportInitialize)btn_Exit).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btn_Minimize).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -139,5 +155,6 @@
         private PictureBox btn_Exit;
         private CustomMaterialDesign.RButton btnStudentDepartment;
         private PictureBox pictureBox6;
+        private PictureBox btn_Minimize;
     }
 }

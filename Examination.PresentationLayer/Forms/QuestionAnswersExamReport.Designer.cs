@@ -35,25 +35,28 @@
             btn_Exit = new PictureBox();
             btnQuestionAnswerExam = new CustomMaterialDesign.RButton();
             pictureBox6 = new PictureBox();
+            btn_Minimize = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)btn_Exit).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btn_Minimize).BeginInit();
             SuspendLayout();
             // 
             // comboExamId
             // 
+            comboExamId.Font = new Font("Gabriola", 12F);
             comboExamId.FormattingEnabled = true;
-            comboExamId.Location = new Point(139, 23);
+            comboExamId.Location = new Point(139, 18);
             comboExamId.Name = "comboExamId";
-            comboExamId.Size = new Size(116, 23);
+            comboExamId.Size = new Size(116, 37);
             comboExamId.TabIndex = 12;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10F);
-            label1.Location = new Point(62, 24);
+            label1.Font = new Font("Gabriola", 15F);
+            label1.Location = new Point(56, 17);
             label1.Name = "label1";
-            label1.Size = new Size(57, 19);
+            label1.Size = new Size(67, 37);
             label1.TabIndex = 11;
             label1.Text = "Exam Id";
             // 
@@ -85,7 +88,7 @@
             btnQuestionAnswerExam.BorderSize = 0;
             btnQuestionAnswerExam.FlatAppearance.BorderSize = 0;
             btnQuestionAnswerExam.FlatStyle = FlatStyle.Flat;
-            btnQuestionAnswerExam.Font = new Font("Microsoft Sans Serif", 10.5F);
+            btnQuestionAnswerExam.Font = new Font("Gabriola", 14F);
             btnQuestionAnswerExam.ForeColor = Color.White;
             btnQuestionAnswerExam.Location = new Point(334, 12);
             btnQuestionAnswerExam.Name = "btnQuestionAnswerExam";
@@ -106,12 +109,24 @@
             pictureBox6.TabIndex = 21;
             pictureBox6.TabStop = false;
             // 
+            // btn_Minimize
+            // 
+            btn_Minimize.Image = (Image)resources.GetObject("btn_Minimize.Image");
+            btn_Minimize.Location = new Point(698, 4);
+            btn_Minimize.Name = "btn_Minimize";
+            btn_Minimize.Size = new Size(30, 24);
+            btn_Minimize.SizeMode = PictureBoxSizeMode.Zoom;
+            btn_Minimize.TabIndex = 22;
+            btn_Minimize.TabStop = false;
+            btn_Minimize.Click += btn_Minimize_Click;
+            // 
             // QuestionAnswersExamReport
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(763, 569);
+            Controls.Add(btn_Minimize);
             Controls.Add(pictureBox6);
             Controls.Add(btnQuestionAnswerExam);
             Controls.Add(btn_Exit);
@@ -126,6 +141,7 @@
             Load += QuestionAnswersExamReport_Load;
             ((System.ComponentModel.ISupportInitialize)btn_Exit).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btn_Minimize).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -137,5 +153,6 @@
         private PictureBox btn_Exit;
         private CustomMaterialDesign.RButton btnQuestionAnswerExam;
         private PictureBox pictureBox6;
+        private PictureBox btn_Minimize;
     }
 }

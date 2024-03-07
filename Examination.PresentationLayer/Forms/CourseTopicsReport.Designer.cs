@@ -35,25 +35,28 @@
             btnCourseTopics = new CustomMaterialDesign.RButton();
             pictureBox6 = new PictureBox();
             btn_Exit = new PictureBox();
+            btn_Minimize = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btn_Exit).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btn_Minimize).BeginInit();
             SuspendLayout();
             // 
             // comboCourse
             // 
+            comboCourse.Font = new Font("Gabriola", 12F);
             comboCourse.FormattingEnabled = true;
-            comboCourse.Location = new Point(133, 23);
+            comboCourse.Location = new Point(133, 17);
             comboCourse.Name = "comboCourse";
-            comboCourse.Size = new Size(142, 23);
+            comboCourse.Size = new Size(142, 37);
             comboCourse.TabIndex = 12;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10F);
-            label1.Location = new Point(60, 24);
+            label1.Font = new Font("Gabriola", 15F);
+            label1.Location = new Point(61, 17);
             label1.Name = "label1";
-            label1.Size = new Size(52, 19);
+            label1.Size = new Size(60, 37);
             label1.TabIndex = 11;
             label1.Text = "Course";
             // 
@@ -74,7 +77,7 @@
             btnCourseTopics.BorderSize = 0;
             btnCourseTopics.FlatAppearance.BorderSize = 0;
             btnCourseTopics.FlatStyle = FlatStyle.Flat;
-            btnCourseTopics.Font = new Font("Microsoft Sans Serif", 10.5F);
+            btnCourseTopics.Font = new Font("Gabriola", 14F);
             btnCourseTopics.ForeColor = Color.White;
             btnCourseTopics.Location = new Point(361, 12);
             btnCourseTopics.Name = "btnCourseTopics";
@@ -88,7 +91,7 @@
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(16, 17);
+            pictureBox6.Location = new Point(16, 18);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(28, 29);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
@@ -106,18 +109,30 @@
             btn_Exit.TabStop = false;
             btn_Exit.Click += btn_Exit_Click;
             // 
+            // btn_Minimize
+            // 
+            btn_Minimize.Image = (Image)resources.GetObject("btn_Minimize.Image");
+            btn_Minimize.Location = new Point(695, 5);
+            btn_Minimize.Name = "btn_Minimize";
+            btn_Minimize.Size = new Size(30, 24);
+            btn_Minimize.SizeMode = PictureBoxSizeMode.Zoom;
+            btn_Minimize.TabIndex = 17;
+            btn_Minimize.TabStop = false;
+            btn_Minimize.Click += btn_Minimize_Click;
+            // 
             // CourseTopicsReport
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(763, 569);
+            Controls.Add(btn_Minimize);
             Controls.Add(btn_Exit);
             Controls.Add(pictureBox6);
-            Controls.Add(btnCourseTopics);
             Controls.Add(reportCourseTopics);
             Controls.Add(comboCourse);
             Controls.Add(label1);
+            Controls.Add(btnCourseTopics);
             FormBorderStyle = FormBorderStyle.None;
             Name = "CourseTopicsReport";
             ShowIcon = false;
@@ -126,6 +141,7 @@
             Load += CourseTopicsReport_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)btn_Exit).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btn_Minimize).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -137,5 +153,6 @@
         private CustomMaterialDesign.RButton btnCourseTopics;
         private PictureBox pictureBox6;
         private PictureBox btn_Exit;
+        private PictureBox btn_Minimize;
     }
 }

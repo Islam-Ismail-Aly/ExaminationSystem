@@ -54,5 +54,10 @@ namespace Examination.PresentationLayer.Forms
                 MessageBox.Show("Please check as Student or Instructor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void btn_Minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

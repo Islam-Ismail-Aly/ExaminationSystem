@@ -44,6 +44,7 @@
             pictureBox2 = new PictureBox();
             txtUsername = new TextBox();
             label6 = new Label();
+            pictureBox10 = new PictureBox();
             pictureBox1 = new PictureBox();
             txtBranch = new TextBox();
             txtDepartment = new TextBox();
@@ -79,15 +80,15 @@
             label1 = new Label();
             tabReport = new TabPage();
             groupBox2 = new GroupBox();
-            groupBox1 = new GroupBox();
-            btn_Exit = new PictureBox();
-            pictureBox10 = new PictureBox();
-            btnStudentDepartmentfrm = new CustomMaterialDesign.RButton();
-            btnStudentCourseGradesfrm = new CustomMaterialDesign.RButton();
-            btnCourseTopicfrm = new CustomMaterialDesign.RButton();
+            btnInstructorCoursefrm = new CustomMaterialDesign.RButton();
             btnQuestionAnswerExam = new CustomMaterialDesign.RButton();
             btnStudentQuestionAnswerExam = new CustomMaterialDesign.RButton();
-            btnInstructorCoursefrm = new CustomMaterialDesign.RButton();
+            groupBox1 = new GroupBox();
+            btnCourseTopicfrm = new CustomMaterialDesign.RButton();
+            btnStudentCourseGradesfrm = new CustomMaterialDesign.RButton();
+            btnStudentDepartmentfrm = new CustomMaterialDesign.RButton();
+            btn_Exit = new PictureBox();
+            btn_Minimize = new PictureBox();
             tabControl1.SuspendLayout();
             tabProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -95,6 +96,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridCourses).BeginInit();
             tabAddQuestion.SuspendLayout();
@@ -107,7 +109,7 @@
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btn_Exit).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btn_Minimize).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -154,7 +156,7 @@
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(225, 198);
+            pictureBox6.Location = new Point(225, 205);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(28, 29);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
@@ -164,17 +166,17 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            label5.Location = new Point(268, 202);
+            label5.Font = new Font("Gabriola", 15F);
+            label5.Location = new Point(264, 202);
             label5.Name = "label5";
-            label5.Size = new Size(61, 19);
+            label5.Size = new Size(66, 37);
             label5.TabIndex = 24;
             label5.Text = "Courses";
             // 
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(224, 135);
+            pictureBox5.Location = new Point(224, 139);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(28, 29);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
@@ -194,20 +196,20 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            label9.Location = new Point(268, 85);
+            label9.Font = new Font("Gabriola", 15F);
+            label9.Location = new Point(268, 80);
             label9.Name = "label9";
-            label9.Size = new Size(55, 19);
+            label9.Size = new Size(62, 37);
             label9.TabIndex = 20;
             label9.Text = "Branch";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            label8.Location = new Point(268, 141);
+            label8.Font = new Font("Gabriola", 15F);
+            label8.Location = new Point(263, 138);
             label8.Name = "label8";
-            label8.Size = new Size(89, 19);
+            label8.Size = new Size(92, 37);
             label8.TabIndex = 21;
             label8.Text = "Department";
             // 
@@ -226,11 +228,11 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            label4.Font = new Font("Gabriola", 17F, FontStyle.Bold);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(7, 9);
+            label4.Location = new Point(7, 4);
             label4.Name = "label4";
-            label4.Size = new Size(99, 28);
+            label4.Size = new Size(87, 42);
             label4.TabIndex = 0;
             label4.Text = "Welcome";
             // 
@@ -238,25 +240,26 @@
             // 
             txtDateTime.BackColor = Color.MediumPurple;
             txtDateTime.BorderStyle = BorderStyle.None;
-            txtDateTime.Font = new Font("Segoe UI", 4F, FontStyle.Bold, GraphicsUnit.Millimeter);
+            txtDateTime.Font = new Font("Gabriola", 5F, FontStyle.Bold, GraphicsUnit.Millimeter);
             txtDateTime.ForeColor = Color.White;
             txtDateTime.HideSelection = false;
-            txtDateTime.Location = new Point(447, 13);
+            txtDateTime.Location = new Point(446, 8);
             txtDateTime.Name = "txtDateTime";
             txtDateTime.ReadOnly = true;
-            txtDateTime.Size = new Size(186, 21);
+            txtDateTime.Size = new Size(186, 33);
             txtDateTime.TabIndex = 2;
             // 
             // txtInstructorName
             // 
             txtInstructorName.BackColor = Color.MediumPurple;
             txtInstructorName.BorderStyle = BorderStyle.None;
+            txtInstructorName.Font = new Font("Gabriola", 5F, FontStyle.Bold, GraphicsUnit.Millimeter);
             txtInstructorName.ForeColor = Color.White;
-            txtInstructorName.Location = new Point(112, 16);
+            txtInstructorName.Location = new Point(104, 8);
             txtInstructorName.Margin = new Padding(5, 6, 5, 6);
             txtInstructorName.Name = "txtInstructorName";
             txtInstructorName.ReadOnly = true;
-            txtInstructorName.Size = new Size(105, 18);
+            txtInstructorName.Size = new Size(105, 33);
             txtInstructorName.TabIndex = 14;
             txtInstructorName.TextAlign = HorizontalAlignment.Center;
             // 
@@ -274,23 +277,34 @@
             // 
             txtUsername.BackColor = Color.MediumPurple;
             txtUsername.BorderStyle = BorderStyle.FixedSingle;
+            txtUsername.Font = new Font("Gabriola", 5F, FontStyle.Bold, GraphicsUnit.Millimeter);
             txtUsername.ForeColor = Color.White;
             txtUsername.Location = new Point(19, 257);
             txtUsername.Name = "txtUsername";
             txtUsername.ReadOnly = true;
-            txtUsername.Size = new Size(166, 25);
+            txtUsername.Size = new Size(166, 40);
             txtUsername.TabIndex = 17;
             txtUsername.TextAlign = HorizontalAlignment.Center;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            label6.Location = new Point(63, 224);
+            label6.Font = new Font("Gabriola", 15F);
+            label6.Location = new Point(63, 216);
             label6.Name = "label6";
-            label6.Size = new Size(76, 19);
+            label6.Size = new Size(79, 37);
             label6.TabIndex = 16;
             label6.Text = "Username";
+            // 
+            // pictureBox10
+            // 
+            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
+            pictureBox10.Location = new Point(631, 90);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(187, 202);
+            pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox10.TabIndex = 15;
+            pictureBox10.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -306,12 +320,13 @@
             // 
             txtBranch.BackColor = Color.MediumPurple;
             txtBranch.BorderStyle = BorderStyle.FixedSingle;
+            txtBranch.Font = new Font("Gabriola", 5F, FontStyle.Bold, GraphicsUnit.Millimeter);
             txtBranch.ForeColor = Color.White;
-            txtBranch.Location = new Point(374, 83);
+            txtBranch.Location = new Point(374, 78);
             txtBranch.Margin = new Padding(5, 6, 5, 6);
             txtBranch.Name = "txtBranch";
             txtBranch.ReadOnly = true;
-            txtBranch.Size = new Size(183, 25);
+            txtBranch.Size = new Size(183, 40);
             txtBranch.TabIndex = 10;
             txtBranch.TextAlign = HorizontalAlignment.Center;
             // 
@@ -319,12 +334,13 @@
             // 
             txtDepartment.BackColor = Color.MediumPurple;
             txtDepartment.BorderStyle = BorderStyle.FixedSingle;
+            txtDepartment.Font = new Font("Gabriola", 5F, FontStyle.Bold, GraphicsUnit.Millimeter);
             txtDepartment.ForeColor = Color.White;
             txtDepartment.Location = new Point(374, 141);
             txtDepartment.Margin = new Padding(5, 6, 5, 6);
             txtDepartment.Name = "txtDepartment";
             txtDepartment.ReadOnly = true;
-            txtDepartment.Size = new Size(183, 25);
+            txtDepartment.Size = new Size(183, 40);
             txtDepartment.TabIndex = 11;
             txtDepartment.TextAlign = HorizontalAlignment.Center;
             // 
@@ -397,11 +413,12 @@
             // 
             // comboCourse
             // 
+            comboCourse.Font = new Font("Gabriola", 4F, FontStyle.Bold, GraphicsUnit.Millimeter);
             comboCourse.FormattingEnabled = true;
-            comboCourse.Location = new Point(156, 27);
+            comboCourse.Location = new Point(156, 22);
             comboCourse.Margin = new Padding(5, 6, 5, 6);
             comboCourse.Name = "comboCourse";
-            comboCourse.Size = new Size(153, 25);
+            comboCourse.Size = new Size(153, 36);
             comboCourse.TabIndex = 2;
             // 
             // btn_AddQuestion
@@ -413,11 +430,11 @@
             btn_AddQuestion.BorderSize = 0;
             btn_AddQuestion.FlatAppearance.BorderSize = 0;
             btn_AddQuestion.FlatStyle = FlatStyle.Flat;
-            btn_AddQuestion.Font = new Font("Microsoft Sans Serif", 10.5F);
+            btn_AddQuestion.Font = new Font("Gabriola", 15F);
             btn_AddQuestion.ForeColor = Color.White;
             btn_AddQuestion.Location = new Point(89, 352);
             btn_AddQuestion.Name = "btn_AddQuestion";
-            btn_AddQuestion.Size = new Size(142, 40);
+            btn_AddQuestion.Size = new Size(142, 46);
             btn_AddQuestion.TabIndex = 27;
             btn_AddQuestion.Text = "Create";
             btn_AddQuestion.TextColor = Color.White;
@@ -427,11 +444,12 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Gabriola", 5F, FontStyle.Regular, GraphicsUnit.Millimeter);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(42, 117);
+            label2.Location = new Point(41, 112);
             label2.Margin = new Padding(5, 0, 5, 0);
             label2.Name = "label2";
-            label2.Size = new Size(104, 19);
+            label2.Size = new Size(98, 35);
             label2.TabIndex = 0;
             label2.Text = "Question Type";
             // 
@@ -458,31 +476,34 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Gabriola", 5F, FontStyle.Regular, GraphicsUnit.Millimeter);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(42, 27);
+            label3.Location = new Point(42, 22);
             label3.Margin = new Padding(5, 0, 5, 0);
             label3.Name = "label3";
-            label3.Size = new Size(55, 19);
+            label3.Size = new Size(57, 35);
             label3.TabIndex = 0;
             label3.Text = "Course";
             // 
             // comboQuestionType
             // 
+            comboQuestionType.Font = new Font("Gabriola", 4F, FontStyle.Bold, GraphicsUnit.Millimeter);
             comboQuestionType.FormattingEnabled = true;
-            comboQuestionType.Location = new Point(156, 117);
+            comboQuestionType.Location = new Point(156, 113);
             comboQuestionType.Margin = new Padding(5, 6, 5, 6);
             comboQuestionType.Name = "comboQuestionType";
-            comboQuestionType.Size = new Size(153, 25);
+            comboQuestionType.Size = new Size(153, 36);
             comboQuestionType.TabIndex = 2;
             comboQuestionType.SelectedIndexChanged += comboQuestionType_SelectedIndexChanged;
             // 
             // radioF
             // 
             radioF.AutoSize = true;
-            radioF.Location = new Point(493, 105);
+            radioF.Font = new Font("Gabriola", 5F, FontStyle.Regular, GraphicsUnit.Millimeter);
+            radioF.Location = new Point(493, 94);
             radioF.Margin = new Padding(5, 6, 5, 6);
             radioF.Name = "radioF";
-            radioF.Size = new Size(34, 23);
+            radioF.Size = new Size(40, 39);
             radioF.TabIndex = 5;
             radioF.TabStop = true;
             radioF.Text = "F";
@@ -491,10 +512,11 @@
             // radioT
             // 
             radioT.AutoSize = true;
-            radioT.Location = new Point(438, 104);
+            radioT.Font = new Font("Gabriola", 5F, FontStyle.Regular, GraphicsUnit.Millimeter);
+            radioT.Location = new Point(436, 94);
             radioT.Margin = new Padding(5, 6, 5, 6);
             radioT.Name = "radioT";
-            radioT.Size = new Size(35, 23);
+            radioT.Size = new Size(41, 39);
             radioT.TabIndex = 5;
             radioT.TabStop = true;
             radioT.Text = "T";
@@ -503,7 +525,7 @@
             // radioAnswerD
             // 
             radioAnswerD.AutoSize = true;
-            radioAnswerD.Location = new Point(345, 364);
+            radioAnswerD.Location = new Point(345, 372);
             radioAnswerD.Margin = new Padding(5, 6, 5, 6);
             radioAnswerD.Name = "radioAnswerD";
             radioAnswerD.Size = new Size(14, 13);
@@ -524,7 +546,7 @@
             // radioAnswerC
             // 
             radioAnswerC.AutoSize = true;
-            radioAnswerC.Location = new Point(345, 300);
+            radioAnswerC.Location = new Point(345, 308);
             radioAnswerC.Margin = new Padding(5, 6, 5, 6);
             radioAnswerC.Name = "radioAnswerC";
             radioAnswerC.Size = new Size(14, 13);
@@ -535,7 +557,7 @@
             // radioAnswerB
             // 
             radioAnswerB.AutoSize = true;
-            radioAnswerB.Location = new Point(345, 242);
+            radioAnswerB.Location = new Point(345, 250);
             radioAnswerB.Margin = new Padding(5, 6, 5, 6);
             radioAnswerB.Name = "radioAnswerB";
             radioAnswerB.Size = new Size(14, 13);
@@ -546,7 +568,7 @@
             // radioAnswerA
             // 
             radioAnswerA.AutoSize = true;
-            radioAnswerA.Location = new Point(345, 181);
+            radioAnswerA.Location = new Point(345, 189);
             radioAnswerA.Margin = new Padding(5, 6, 5, 6);
             radioAnswerA.Name = "radioAnswerA";
             radioAnswerA.Size = new Size(14, 13);
@@ -556,7 +578,7 @@
             // 
             // txtAnswerD
             // 
-            txtAnswerD.Location = new Point(484, 358);
+            txtAnswerD.Location = new Point(484, 366);
             txtAnswerD.Margin = new Padding(5, 6, 5, 6);
             txtAnswerD.Name = "txtAnswerD";
             txtAnswerD.Size = new Size(197, 25);
@@ -564,7 +586,7 @@
             // 
             // txtAnswerC
             // 
-            txtAnswerC.Location = new Point(484, 293);
+            txtAnswerC.Location = new Point(484, 301);
             txtAnswerC.Margin = new Padding(5, 6, 5, 6);
             txtAnswerC.Name = "txtAnswerC";
             txtAnswerC.Size = new Size(197, 25);
@@ -572,7 +594,7 @@
             // 
             // txtAnswerB
             // 
-            txtAnswerB.Location = new Point(484, 236);
+            txtAnswerB.Location = new Point(484, 244);
             txtAnswerB.Margin = new Padding(5, 6, 5, 6);
             txtAnswerB.Name = "txtAnswerB";
             txtAnswerB.Size = new Size(197, 25);
@@ -580,7 +602,7 @@
             // 
             // txtAnswerA
             // 
-            txtAnswerA.Location = new Point(484, 171);
+            txtAnswerA.Location = new Point(484, 179);
             txtAnswerA.Margin = new Padding(5, 6, 5, 6);
             txtAnswerA.Name = "txtAnswerA";
             txtAnswerA.Size = new Size(197, 25);
@@ -598,70 +620,77 @@
             // lblAnsD
             // 
             lblAnsD.AutoSize = true;
-            lblAnsD.Location = new Point(369, 360);
+            lblAnsD.Font = new Font("Gabriola", 5F, FontStyle.Regular, GraphicsUnit.Millimeter);
+            lblAnsD.Location = new Point(369, 363);
             lblAnsD.Margin = new Padding(5, 0, 5, 0);
             lblAnsD.Name = "lblAnsD";
-            lblAnsD.Size = new Size(90, 19);
+            lblAnsD.Size = new Size(82, 35);
             lblAnsD.TabIndex = 0;
-            lblAnsD.Text = "Answer (D) :";
+            lblAnsD.Text = "Answer (D)";
             // 
             // lblAnsC
             // 
             lblAnsC.AutoSize = true;
-            lblAnsC.Location = new Point(369, 296);
+            lblAnsC.Font = new Font("Gabriola", 5F, FontStyle.Regular, GraphicsUnit.Millimeter);
+            lblAnsC.Location = new Point(369, 299);
             lblAnsC.Margin = new Padding(5, 0, 5, 0);
             lblAnsC.Name = "lblAnsC";
-            lblAnsC.Size = new Size(89, 19);
+            lblAnsC.Size = new Size(81, 35);
             lblAnsC.TabIndex = 0;
-            lblAnsC.Text = "Answer (C) :";
+            lblAnsC.Text = "Answer (C)";
             // 
             // lblAnsB
             // 
             lblAnsB.AutoSize = true;
-            lblAnsB.Location = new Point(369, 238);
+            lblAnsB.Font = new Font("Gabriola", 5F, FontStyle.Regular, GraphicsUnit.Millimeter);
+            lblAnsB.Location = new Point(369, 241);
             lblAnsB.Margin = new Padding(5, 0, 5, 0);
             lblAnsB.Name = "lblAnsB";
-            lblAnsB.Size = new Size(89, 19);
+            lblAnsB.Size = new Size(80, 35);
             lblAnsB.TabIndex = 0;
-            lblAnsB.Text = "Answer (B) :";
+            lblAnsB.Text = "Answer (B)";
             // 
             // lblAnsA
             // 
             lblAnsA.AutoSize = true;
-            lblAnsA.Location = new Point(369, 175);
+            lblAnsA.Font = new Font("Gabriola", 5F, FontStyle.Regular, GraphicsUnit.Millimeter);
+            lblAnsA.Location = new Point(369, 178);
             lblAnsA.Margin = new Padding(5, 0, 5, 0);
             lblAnsA.Name = "lblAnsA";
-            lblAnsA.Size = new Size(90, 19);
+            lblAnsA.Size = new Size(81, 35);
             lblAnsA.TabIndex = 0;
-            lblAnsA.Text = "Answer (A) :";
+            lblAnsA.Text = "Answer (A)";
             // 
             // lblisCorrect
             // 
             lblisCorrect.AutoSize = true;
-            lblisCorrect.Location = new Point(340, 139);
+            lblisCorrect.Font = new Font("Gabriola", 5F, FontStyle.Regular, GraphicsUnit.Millimeter);
+            lblisCorrect.Location = new Point(340, 143);
             lblisCorrect.Margin = new Padding(5, 0, 5, 0);
             lblisCorrect.Name = "lblisCorrect";
-            lblisCorrect.Size = new Size(73, 19);
+            lblisCorrect.Size = new Size(72, 35);
             lblisCorrect.TabIndex = 0;
             lblisCorrect.Text = "Is Correct";
             // 
             // lblisCorrectTF
             // 
             lblisCorrectTF.AutoSize = true;
-            lblisCorrectTF.Location = new Point(340, 106);
+            lblisCorrectTF.Font = new Font("Gabriola", 5F, FontStyle.Regular, GraphicsUnit.Millimeter);
+            lblisCorrectTF.Location = new Point(340, 95);
             lblisCorrectTF.Margin = new Padding(5, 0, 5, 0);
             lblisCorrectTF.Name = "lblisCorrectTF";
-            lblisCorrectTF.Size = new Size(73, 19);
+            lblisCorrectTF.Size = new Size(72, 35);
             lblisCorrectTF.TabIndex = 0;
             lblisCorrectTF.Text = "Is Correct";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(387, 27);
+            label1.Font = new Font("Gabriola", 5F, FontStyle.Regular, GraphicsUnit.Millimeter);
+            label1.Location = new Point(383, 23);
             label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(124, 19);
+            label1.Size = new Size(120, 35);
             label1.TabIndex = 0;
             label1.Text = "Question Content";
             // 
@@ -684,111 +713,33 @@
             groupBox2.Controls.Add(btnInstructorCoursefrm);
             groupBox2.Controls.Add(btnQuestionAnswerExam);
             groupBox2.Controls.Add(btnStudentQuestionAnswerExam);
-            groupBox2.Location = new Point(10, 270);
+            groupBox2.Font = new Font("Gabriola", 5F, FontStyle.Bold, GraphicsUnit.Millimeter);
+            groupBox2.Location = new Point(10, 248);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(821, 140);
             groupBox2.TabIndex = 9;
             groupBox2.TabStop = false;
             groupBox2.Text = "Exam | Question | Instructor Reports ";
             // 
-            // groupBox1
+            // btnInstructorCoursefrm
             // 
-            groupBox1.BackColor = Color.AliceBlue;
-            groupBox1.Controls.Add(btnCourseTopicfrm);
-            groupBox1.Controls.Add(btnStudentCourseGradesfrm);
-            groupBox1.Controls.Add(btnStudentDepartmentfrm);
-            groupBox1.Location = new Point(10, 39);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(821, 137);
-            groupBox1.TabIndex = 8;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Student | Department | Course Reports ";
-            // 
-            // btn_Exit
-            // 
-            btn_Exit.Image = (Image)resources.GetObject("btn_Exit.Image");
-            btn_Exit.Location = new Point(825, 3);
-            btn_Exit.Name = "btn_Exit";
-            btn_Exit.Size = new Size(35, 28);
-            btn_Exit.SizeMode = PictureBoxSizeMode.Zoom;
-            btn_Exit.TabIndex = 2;
-            btn_Exit.TabStop = false;
-            btn_Exit.Click += btn_Exit_Click;
-            // 
-            // pictureBox10
-            // 
-            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(601, 90);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(224, 246);
-            pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox10.TabIndex = 15;
-            pictureBox10.TabStop = false;
-            // 
-            // btnStudentDepartmentfrm
-            // 
-            btnStudentDepartmentfrm.BackColor = SystemColors.MenuHighlight;
-            btnStudentDepartmentfrm.BackgroundColor = SystemColors.MenuHighlight;
-            btnStudentDepartmentfrm.BorderColor = Color.White;
-            btnStudentDepartmentfrm.BorderRadius = 20;
-            btnStudentDepartmentfrm.BorderSize = 0;
-            btnStudentDepartmentfrm.FlatAppearance.BorderSize = 0;
-            btnStudentDepartmentfrm.FlatStyle = FlatStyle.Flat;
-            btnStudentDepartmentfrm.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Bold);
-            btnStudentDepartmentfrm.ForeColor = Color.White;
-            btnStudentDepartmentfrm.Image = (Image)resources.GetObject("btnStudentDepartmentfrm.Image");
-            btnStudentDepartmentfrm.ImageAlign = ContentAlignment.MiddleLeft;
-            btnStudentDepartmentfrm.Location = new Point(18, 49);
-            btnStudentDepartmentfrm.Margin = new Padding(5);
-            btnStudentDepartmentfrm.Name = "btnStudentDepartmentfrm";
-            btnStudentDepartmentfrm.Size = new Size(251, 51);
-            btnStudentDepartmentfrm.TabIndex = 28;
-            btnStudentDepartmentfrm.Text = "    Student Department Report";
-            btnStudentDepartmentfrm.TextColor = Color.White;
-            btnStudentDepartmentfrm.UseVisualStyleBackColor = false;
-            btnStudentDepartmentfrm.Click += btnStudentDepartmentfrm_Click;
-            // 
-            // btnStudentCourseGradesfrm
-            // 
-            btnStudentCourseGradesfrm.BackColor = SystemColors.MenuHighlight;
-            btnStudentCourseGradesfrm.BackgroundColor = SystemColors.MenuHighlight;
-            btnStudentCourseGradesfrm.BorderColor = Color.White;
-            btnStudentCourseGradesfrm.BorderRadius = 20;
-            btnStudentCourseGradesfrm.BorderSize = 0;
-            btnStudentCourseGradesfrm.FlatAppearance.BorderSize = 0;
-            btnStudentCourseGradesfrm.FlatStyle = FlatStyle.Flat;
-            btnStudentCourseGradesfrm.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Bold);
-            btnStudentCourseGradesfrm.ForeColor = Color.White;
-            btnStudentCourseGradesfrm.Image = (Image)resources.GetObject("btnStudentCourseGradesfrm.Image");
-            btnStudentCourseGradesfrm.ImageAlign = ContentAlignment.MiddleLeft;
-            btnStudentCourseGradesfrm.Location = new Point(295, 49);
-            btnStudentCourseGradesfrm.Name = "btnStudentCourseGradesfrm";
-            btnStudentCourseGradesfrm.Size = new Size(264, 51);
-            btnStudentCourseGradesfrm.TabIndex = 28;
-            btnStudentCourseGradesfrm.Text = "      Student Course Grades Report";
-            btnStudentCourseGradesfrm.TextColor = Color.White;
-            btnStudentCourseGradesfrm.UseVisualStyleBackColor = false;
-            btnStudentCourseGradesfrm.Click += btnStudentCourseGradesfrm_Click;
-            // 
-            // btnCourseTopicfrm
-            // 
-            btnCourseTopicfrm.BackColor = Color.DarkTurquoise;
-            btnCourseTopicfrm.BackgroundColor = Color.DarkTurquoise;
-            btnCourseTopicfrm.BorderColor = Color.White;
-            btnCourseTopicfrm.BorderRadius = 20;
-            btnCourseTopicfrm.BorderSize = 0;
-            btnCourseTopicfrm.FlatAppearance.BorderSize = 0;
-            btnCourseTopicfrm.FlatStyle = FlatStyle.Flat;
-            btnCourseTopicfrm.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Bold);
-            btnCourseTopicfrm.ForeColor = Color.White;
-            btnCourseTopicfrm.Location = new Point(589, 49);
-            btnCourseTopicfrm.Name = "btnCourseTopicfrm";
-            btnCourseTopicfrm.Size = new Size(206, 51);
-            btnCourseTopicfrm.TabIndex = 28;
-            btnCourseTopicfrm.Text = "Course Topic Report";
-            btnCourseTopicfrm.TextColor = Color.White;
-            btnCourseTopicfrm.UseVisualStyleBackColor = false;
-            btnCourseTopicfrm.Click += btnCourseTopicfrm_Click;
+            btnInstructorCoursefrm.BackColor = Color.DarkTurquoise;
+            btnInstructorCoursefrm.BackgroundColor = Color.DarkTurquoise;
+            btnInstructorCoursefrm.BorderColor = Color.White;
+            btnInstructorCoursefrm.BorderRadius = 20;
+            btnInstructorCoursefrm.BorderSize = 0;
+            btnInstructorCoursefrm.FlatAppearance.BorderSize = 0;
+            btnInstructorCoursefrm.FlatStyle = FlatStyle.Flat;
+            btnInstructorCoursefrm.Font = new Font("Gabriola", 15F, FontStyle.Bold);
+            btnInstructorCoursefrm.ForeColor = Color.White;
+            btnInstructorCoursefrm.Location = new Point(589, 49);
+            btnInstructorCoursefrm.Name = "btnInstructorCoursefrm";
+            btnInstructorCoursefrm.Size = new Size(206, 51);
+            btnInstructorCoursefrm.TabIndex = 28;
+            btnInstructorCoursefrm.Text = "Instructor Course Report";
+            btnInstructorCoursefrm.TextColor = Color.White;
+            btnInstructorCoursefrm.UseVisualStyleBackColor = false;
+            btnInstructorCoursefrm.Click += btnInstructorCoursefrm_Click;
             // 
             // btnQuestionAnswerExam
             // 
@@ -799,14 +750,14 @@
             btnQuestionAnswerExam.BorderSize = 0;
             btnQuestionAnswerExam.FlatAppearance.BorderSize = 0;
             btnQuestionAnswerExam.FlatStyle = FlatStyle.Flat;
-            btnQuestionAnswerExam.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Bold);
+            btnQuestionAnswerExam.Font = new Font("Gabriola", 15F, FontStyle.Bold);
             btnQuestionAnswerExam.ForeColor = Color.White;
             btnQuestionAnswerExam.ImageAlign = ContentAlignment.MiddleLeft;
             btnQuestionAnswerExam.Location = new Point(18, 49);
             btnQuestionAnswerExam.Name = "btnQuestionAnswerExam";
             btnQuestionAnswerExam.Size = new Size(251, 51);
             btnQuestionAnswerExam.TabIndex = 28;
-            btnQuestionAnswerExam.Text = "     Question Answer Exam Report";
+            btnQuestionAnswerExam.Text = "Question Answer Exam Report";
             btnQuestionAnswerExam.TextColor = Color.White;
             btnQuestionAnswerExam.UseVisualStyleBackColor = false;
             btnQuestionAnswerExam.Click += btnQuestionAnswerExam_Click;
@@ -820,37 +771,116 @@
             btnStudentQuestionAnswerExam.BorderSize = 0;
             btnStudentQuestionAnswerExam.FlatAppearance.BorderSize = 0;
             btnStudentQuestionAnswerExam.FlatStyle = FlatStyle.Flat;
-            btnStudentQuestionAnswerExam.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Bold);
+            btnStudentQuestionAnswerExam.Font = new Font("Gabriola", 15F, FontStyle.Bold);
             btnStudentQuestionAnswerExam.ForeColor = Color.White;
             btnStudentQuestionAnswerExam.ImageAlign = ContentAlignment.MiddleLeft;
             btnStudentQuestionAnswerExam.Location = new Point(297, 49);
             btnStudentQuestionAnswerExam.Name = "btnStudentQuestionAnswerExam";
             btnStudentQuestionAnswerExam.Size = new Size(270, 51);
             btnStudentQuestionAnswerExam.TabIndex = 28;
-            btnStudentQuestionAnswerExam.Text = "Student Question Answer Exam Report";
+            btnStudentQuestionAnswerExam.Text = "Student Answer Exam Report";
             btnStudentQuestionAnswerExam.TextColor = Color.White;
             btnStudentQuestionAnswerExam.UseVisualStyleBackColor = false;
             btnStudentQuestionAnswerExam.Click += btnStudentQuestionAnswerExam_Click;
             // 
-            // btnInstructorCoursefrm
+            // groupBox1
             // 
-            btnInstructorCoursefrm.BackColor = Color.DarkTurquoise;
-            btnInstructorCoursefrm.BackgroundColor = Color.DarkTurquoise;
-            btnInstructorCoursefrm.BorderColor = Color.White;
-            btnInstructorCoursefrm.BorderRadius = 20;
-            btnInstructorCoursefrm.BorderSize = 0;
-            btnInstructorCoursefrm.FlatAppearance.BorderSize = 0;
-            btnInstructorCoursefrm.FlatStyle = FlatStyle.Flat;
-            btnInstructorCoursefrm.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Bold);
-            btnInstructorCoursefrm.ForeColor = Color.White;
-            btnInstructorCoursefrm.Location = new Point(609, 49);
-            btnInstructorCoursefrm.Name = "btnInstructorCoursefrm";
-            btnInstructorCoursefrm.Size = new Size(206, 51);
-            btnInstructorCoursefrm.TabIndex = 28;
-            btnInstructorCoursefrm.Text = "Instructor Course Report";
-            btnInstructorCoursefrm.TextColor = Color.White;
-            btnInstructorCoursefrm.UseVisualStyleBackColor = false;
-            btnInstructorCoursefrm.Click += btnInstructorCoursefrm_Click;
+            groupBox1.BackColor = Color.AliceBlue;
+            groupBox1.Controls.Add(btnCourseTopicfrm);
+            groupBox1.Controls.Add(btnStudentCourseGradesfrm);
+            groupBox1.Controls.Add(btnStudentDepartmentfrm);
+            groupBox1.Font = new Font("Gabriola", 5F, FontStyle.Bold, GraphicsUnit.Millimeter);
+            groupBox1.Location = new Point(10, 39);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(821, 137);
+            groupBox1.TabIndex = 8;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Student | Department | Course Reports ";
+            // 
+            // btnCourseTopicfrm
+            // 
+            btnCourseTopicfrm.BackColor = Color.DarkTurquoise;
+            btnCourseTopicfrm.BackgroundColor = Color.DarkTurquoise;
+            btnCourseTopicfrm.BorderColor = Color.White;
+            btnCourseTopicfrm.BorderRadius = 20;
+            btnCourseTopicfrm.BorderSize = 0;
+            btnCourseTopicfrm.FlatAppearance.BorderSize = 0;
+            btnCourseTopicfrm.FlatStyle = FlatStyle.Flat;
+            btnCourseTopicfrm.Font = new Font("Gabriola", 15F, FontStyle.Bold);
+            btnCourseTopicfrm.ForeColor = Color.White;
+            btnCourseTopicfrm.Location = new Point(589, 49);
+            btnCourseTopicfrm.Name = "btnCourseTopicfrm";
+            btnCourseTopicfrm.Size = new Size(206, 51);
+            btnCourseTopicfrm.TabIndex = 28;
+            btnCourseTopicfrm.Text = "Course Topic Report";
+            btnCourseTopicfrm.TextColor = Color.White;
+            btnCourseTopicfrm.UseVisualStyleBackColor = false;
+            btnCourseTopicfrm.Click += btnCourseTopicfrm_Click;
+            // 
+            // btnStudentCourseGradesfrm
+            // 
+            btnStudentCourseGradesfrm.BackColor = SystemColors.MenuHighlight;
+            btnStudentCourseGradesfrm.BackgroundColor = SystemColors.MenuHighlight;
+            btnStudentCourseGradesfrm.BorderColor = Color.White;
+            btnStudentCourseGradesfrm.BorderRadius = 20;
+            btnStudentCourseGradesfrm.BorderSize = 0;
+            btnStudentCourseGradesfrm.FlatAppearance.BorderSize = 0;
+            btnStudentCourseGradesfrm.FlatStyle = FlatStyle.Flat;
+            btnStudentCourseGradesfrm.Font = new Font("Gabriola", 15F, FontStyle.Bold);
+            btnStudentCourseGradesfrm.ForeColor = Color.White;
+            btnStudentCourseGradesfrm.ImageAlign = ContentAlignment.MiddleLeft;
+            btnStudentCourseGradesfrm.Location = new Point(295, 49);
+            btnStudentCourseGradesfrm.Name = "btnStudentCourseGradesfrm";
+            btnStudentCourseGradesfrm.Size = new Size(264, 51);
+            btnStudentCourseGradesfrm.TabIndex = 28;
+            btnStudentCourseGradesfrm.Text = "Student Course Grades Report";
+            btnStudentCourseGradesfrm.TextColor = Color.White;
+            btnStudentCourseGradesfrm.UseVisualStyleBackColor = false;
+            btnStudentCourseGradesfrm.Click += btnStudentCourseGradesfrm_Click;
+            // 
+            // btnStudentDepartmentfrm
+            // 
+            btnStudentDepartmentfrm.BackColor = SystemColors.MenuHighlight;
+            btnStudentDepartmentfrm.BackgroundColor = SystemColors.MenuHighlight;
+            btnStudentDepartmentfrm.BorderColor = Color.White;
+            btnStudentDepartmentfrm.BorderRadius = 20;
+            btnStudentDepartmentfrm.BorderSize = 0;
+            btnStudentDepartmentfrm.FlatAppearance.BorderSize = 0;
+            btnStudentDepartmentfrm.FlatStyle = FlatStyle.Flat;
+            btnStudentDepartmentfrm.Font = new Font("Gabriola", 15F, FontStyle.Bold);
+            btnStudentDepartmentfrm.ForeColor = Color.White;
+            btnStudentDepartmentfrm.ImageAlign = ContentAlignment.MiddleLeft;
+            btnStudentDepartmentfrm.Location = new Point(18, 49);
+            btnStudentDepartmentfrm.Margin = new Padding(5);
+            btnStudentDepartmentfrm.Name = "btnStudentDepartmentfrm";
+            btnStudentDepartmentfrm.Size = new Size(251, 51);
+            btnStudentDepartmentfrm.TabIndex = 28;
+            btnStudentDepartmentfrm.Text = "Student Department Report";
+            btnStudentDepartmentfrm.TextColor = Color.White;
+            btnStudentDepartmentfrm.UseVisualStyleBackColor = false;
+            btnStudentDepartmentfrm.Click += btnStudentDepartmentfrm_Click;
+            // 
+            // btn_Exit
+            // 
+            btn_Exit.Image = (Image)resources.GetObject("btn_Exit.Image");
+            btn_Exit.Location = new Point(825, 3);
+            btn_Exit.Name = "btn_Exit";
+            btn_Exit.Size = new Size(35, 28);
+            btn_Exit.SizeMode = PictureBoxSizeMode.Zoom;
+            btn_Exit.TabIndex = 2;
+            btn_Exit.TabStop = false;
+            btn_Exit.Click += btn_Exit_Click;
+            // 
+            // btn_Minimize
+            // 
+            btn_Minimize.Image = (Image)resources.GetObject("btn_Minimize.Image");
+            btn_Minimize.Location = new Point(795, 5);
+            btn_Minimize.Name = "btn_Minimize";
+            btn_Minimize.Size = new Size(30, 24);
+            btn_Minimize.SizeMode = PictureBoxSizeMode.Zoom;
+            btn_Minimize.TabIndex = 9;
+            btn_Minimize.TabStop = false;
+            btn_Minimize.Click += btn_Minimize_Click;
             // 
             // Instructorfrm
             // 
@@ -858,6 +888,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(863, 516);
+            Controls.Add(btn_Minimize);
             Controls.Add(btn_Exit);
             Controls.Add(tabControl1);
             Font = new Font("Segoe UI", 4.5F, FontStyle.Regular, GraphicsUnit.Millimeter);
@@ -877,6 +908,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridCourses).EndInit();
             tabAddQuestion.ResumeLayout(false);
@@ -891,7 +923,7 @@
             groupBox2.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)btn_Exit).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btn_Minimize).EndInit();
             ResumeLayout(false);
         }
 
@@ -957,5 +989,6 @@
         private CustomMaterialDesign.RButton btnQuestionAnswerExam;
         private CustomMaterialDesign.RButton btnStudentQuestionAnswerExam;
         private CustomMaterialDesign.RButton btnInstructorCoursefrm;
+        private PictureBox btn_Minimize;
     }
 }

@@ -13,7 +13,7 @@ namespace Examination.PresentationLayer
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Login());
+            Application.Run(new Splashfrm());
 
             //Scaffold-DbContext "Server=.;Database=ExaminationSystem;Trusted_Connection=True;TrustServerCertificate=True;"Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data
         }
