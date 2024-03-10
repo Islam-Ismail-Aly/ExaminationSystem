@@ -42,12 +42,14 @@
             radioStudent = new RadioButton();
             radioInstructor = new RadioButton();
             btn_Minimize = new PictureBox();
+            btn_showPassword = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btn_Exit).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btn_Minimize).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btn_showPassword).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -157,6 +159,7 @@
             txt_Password.Size = new Size(190, 17);
             txt_Password.TabIndex = 4;
             txt_Password.UseSystemPasswordChar = true;
+            txt_Password.TextChanged += txt_Password_TextChanged;
             // 
             // radioStudent
             // 
@@ -195,6 +198,17 @@
             btn_Minimize.TabStop = false;
             btn_Minimize.Click += btn_Minimize_Click;
             // 
+            // btn_showPassword
+            // 
+            btn_showPassword.Image = (Image)resources.GetObject("btn_showPassword.Image");
+            btn_showPassword.Location = new Point(265, 365);
+            btn_showPassword.Name = "btn_showPassword";
+            btn_showPassword.Size = new Size(26, 20);
+            btn_showPassword.SizeMode = PictureBoxSizeMode.Zoom;
+            btn_showPassword.TabIndex = 1;
+            btn_showPassword.TabStop = false;
+            btn_showPassword.Click += btn_showPassword_Click;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -212,6 +226,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(btn_Exit);
+            Controls.Add(btn_showPassword);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
@@ -227,6 +242,7 @@
             ((System.ComponentModel.ISupportInitialize)btn_Exit).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)btn_Minimize).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btn_showPassword).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -246,5 +262,6 @@
         private RadioButton radioStudent;
         private RadioButton radioInstructor;
         private PictureBox btn_Minimize;
+        private PictureBox btn_showPassword;
     }
 }

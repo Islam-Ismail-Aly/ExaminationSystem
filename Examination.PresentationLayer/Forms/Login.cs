@@ -1,11 +1,13 @@
 ﻿using Examination.DataAccessLayer.Data;
 using Examination.PresentationLayer.Helpers;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Examination.PresentationLayer.Forms
 {
     public partial class Login : Form
     {
         private readonly ExaminationSystemContext _db;
+        private bool passwordVisible = false;
         public Login()
         {
             InitializeComponent();
@@ -19,6 +21,7 @@ namespace Examination.PresentationLayer.Forms
 
         private void Login_Load(object sender, EventArgs e)
         {
+            btn_showPassword.Visible = false;
         }
 
         private void btn_Login_Click(object sender, EventArgs e)
@@ -62,6 +65,24 @@ namespace Examination.PresentationLayer.Forms
         private void btn_Minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_showPassword_Click(object sender, EventArgs e)
+        {
+            txt_Password.UseSystemPasswordChar = !passwordVisible;
+            passwordVisible = !passwordVisible;
+        }
+
+        private void txt_Password_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_Password.Text.IsNullOrEmpty())
+            {
+                btn_showPassword.Visible = false;
+            }
+            else
+            {
+                btn_showPassword.Visible = true;
+            }
         }
     }
 }
