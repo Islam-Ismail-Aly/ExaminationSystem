@@ -64,7 +64,7 @@ namespace Examination.PresentationLayer.Forms
 
         private void btn_Exit_Click(object sender, EventArgs e)
         {
-            CustomHelperManager.ExitHelper();
+            this.Hide();
         }
 
         private void btn_Minimize_Click(object sender, EventArgs e)

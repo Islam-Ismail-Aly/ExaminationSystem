@@ -29,6 +29,8 @@ namespace Examination.PresentationLayer.Forms
                 if (student != null)
                 {
                     Studentfrm studentfrm = new Studentfrm(student);
+                    this.Hide();
+                    studentfrm.FormClosed += (s, args) => this.Close();
                     studentfrm.ShowDialog();
                 }
                 else
@@ -42,7 +44,9 @@ namespace Examination.PresentationLayer.Forms
                 if (instructor != null)
                 {
                     Instructorfrm instructorfrm = new Instructorfrm(instructor);
-                    instructorfrm.ShowDialog();
+                    this.Hide();
+                    instructorfrm.FormClosed += (s, args) => this.Close();
+                    instructorfrm.Show();
                 }
                 else
                 {
