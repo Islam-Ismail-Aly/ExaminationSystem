@@ -37,10 +37,10 @@
             panel_1 = new Panel();
             timer_1 = new System.Windows.Forms.Timer(components);
             label1 = new Label();
-            panel2 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            panel_2.SuspendLayout();
             SuspendLayout();
             // 
             // pictureBox1
@@ -75,17 +75,18 @@
             // 
             // panel_2
             // 
-            panel_2.Location = new Point(1, 290);
+            panel_2.Controls.Add(panel_1);
+            panel_2.Location = new Point(135, 276);
             panel_2.Name = "panel_2";
-            panel_2.Size = new Size(526, 18);
+            panel_2.Size = new Size(270, 3);
             panel_2.TabIndex = 2;
             // 
             // panel_1
             // 
             panel_1.BackColor = Color.DarkTurquoise;
-            panel_1.Location = new Point(1, 290);
+            panel_1.Location = new Point(1, -1);
             panel_1.Name = "panel_1";
-            panel_1.Size = new Size(30, 18);
+            panel_1.Size = new Size(10, 5);
             panel_1.TabIndex = 2;
             // 
             // timer_1
@@ -97,20 +98,12 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Gabriola", 30F);
-            label1.ForeColor = SystemColors.Desktop;
-            label1.Location = new Point(120, 176);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(120, 194);
             label1.Name = "label1";
             label1.Size = new Size(284, 74);
             label1.TabIndex = 3;
             label1.Text = "Examination System";
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.DarkTurquoise;
-            panel2.Location = new Point(173, 239);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(170, 3);
-            panel2.TabIndex = 4;
             // 
             // Splashfrm
             // 
@@ -118,9 +111,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(525, 309);
-            Controls.Add(panel2);
             Controls.Add(label1);
-            Controls.Add(panel_1);
             Controls.Add(panel_2);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
@@ -133,6 +124,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            panel_2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -146,6 +138,5 @@
         private Panel panel_1;
         private System.Windows.Forms.Timer timer_1;
         private Label label1;
-        private Panel panel2;
     }
 }

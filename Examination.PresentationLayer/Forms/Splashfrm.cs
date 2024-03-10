@@ -2,7 +2,7 @@
 {
     public partial class Splashfrm : Form
     {
-        private const int TargetPanelWidth = 522;
+        private const int TargetPanelWidth = 248;
         private const int PanelWidthIncrement = 2;
 
         public Splashfrm()
